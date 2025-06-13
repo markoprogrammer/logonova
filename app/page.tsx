@@ -25,7 +25,7 @@ export default function Home() {
           <div className="flex-1 max-w-xl flex flex-col items-center md:items-start text-center md:text-left mt-6 md:mt-0">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2 leading-tight">Logopedski kabinet LOGONOVA</h1>
             <h2 className="text-lg sm:text-xl md:text-2xl text-primary font-semibold mb-4">Ana Novaković, master logoped</h2>
-            <p className="text-secondary text-base sm:text-lg md:text-xl font-medium mb-6">Stručna logopedska podrška za decu i odrasle</p>
+            <p className="text-secondary text-base sm:text-lg md:text-xl font-medium mb-6">Stručna logopedska podrška za decu</p>
             <a href="#kontakt" className="bg-accent text-primary px-8 py-3 rounded-full font-bold shadow hover:bg-yellow-300 transition-colors text-lg md:text-xl">Kontaktirajte nas</a>
           </div>
           {/* Image on the right (or above on mobile) */}
@@ -47,7 +47,7 @@ export default function Home() {
       <section id="onama" className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 text-center">O nama</h2>
-          <p className="text-gray-700 text-lg text-center">Naš posao je strast i posvećenost. Pomažemo deci i odraslima da razviju svoje govorne i jezičke veštine kroz individualni pristup i savremene metode. Vaše poverenje nam je važno, a napredak svakog klijenta naš je najveći uspeh.</p>
+          <p className="text-gray-700 text-lg text-center">Naš posao je strast i posvećenost. Pomažemo deci da razviju svoje govorne i jezičke veštine kroz individualni pristup i savremene metode. Vaše poverenje nam je važno, a napredak svakog klijenta naš je najveći uspeh.</p>
         </div>
       </section>
 
@@ -62,7 +62,7 @@ export default function Home() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-accent hover:shadow-lg transition">
               <h3 className="text-xl font-semibold mb-2 text-primary">Terapija</h3>
-              <p className="text-secondary font-medium">Individualni i grupni tretmani za decu i odrasle</p>
+              <p className="text-secondary font-medium">Individualni tretmani za decu</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-accent hover:shadow-lg transition">
               <h3 className="text-xl font-semibold mb-2 text-primary">Savetovanje</h3>
