@@ -1,9 +1,62 @@
 import Image from 'next/image'
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+import Script from 'next/script'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
+      {/* Structured Data for Local Business */}
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalBusiness",
+            "name": "Logopedski kabinet LOGONOVA Kragujevac",
+            "image": "https://logonova.rs/455379179.png",
+            "description": "Profesionalna logopedska usluga u Kragujevcu. Individualni pristup, dijagnostika i terapija govorno-jezičkih poteškoća za decu.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Andre Marinković 30",
+              "addressLocality": "Kragujevac",
+              "postalCode": "34000",
+              "addressCountry": "RS"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "44.0165",
+              "longitude": "20.9202"
+            },
+            "url": "https://logonova.rs",
+            "telephone": "+381638703545",
+            "email": "ana.novakovic@logonova.rs",
+            "priceRange": "$$",
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "09:00",
+              "closes": "17:00"
+            },
+            "areaServed": {
+              "@type": "City",
+              "name": "Kragujevac"
+            },
+            "medicalSpecialty": "Speech Therapy",
+            "sameAs": [
+              "https://www.facebook.com/logonova",
+              "https://www.instagram.com/logonova"
+            ]
+          })
+        }}
+      />
+
       {/* Navigation */}
       <nav className="flex flex-wrap justify-between items-center px-4 md:px-6 py-4 bg-white shadow-sm sticky top-0 z-10">
         <div className="flex items-center space-x-2">
@@ -25,16 +78,20 @@ export default function Home() {
           <div className="flex-1 max-w-xl flex flex-col items-center md:items-start text-center md:text-left mt-6 md:mt-0">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2 leading-tight">Logopedski kabinet LOGONOVA</h1>
             <h2 className="text-lg sm:text-xl md:text-2xl text-primary font-semibold mb-4">Ana Novaković, master logoped</h2>
-            <p className="text-secondary text-base sm:text-lg md:text-xl font-medium mb-6">Stručna logopedska podrška za decu</p>
-            <a href="#kontakt" className="bg-accent text-primary px-8 py-3 rounded-full font-bold shadow hover:bg-yellow-300 transition-colors text-lg md:text-xl">Kontaktirajte nas</a>
+            <p className="text-secondary text-base sm:text-lg md:text-xl font-medium mb-6">Stručna logopedska podrška za decu u Kragujevcu.</p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="#kontakt" className="bg-accent text-primary px-8 py-3 rounded-full font-bold shadow hover:bg-yellow-300 transition-colors text-lg md:text-xl">Zakažite termin</a>
+              <a href="tel:+381638703545" className="bg-primary text-white px-8 py-3 rounded-full font-bold shadow hover:bg-primary/90 transition-colors text-lg md:text-xl">063 8703545</a>
+            </div>
           </div>
           {/* Image on the right (or above on mobile) */}
           <div className="flex-1 flex justify-center md:justify-end w-full max-w-xs sm:max-w-sm md:max-w-md">
             <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-96">
               <Image
                 src="/455379179.png"
-                alt="Logopedski kabinet LOGONOVA ilustracija"
+                alt="Logopedski kabinet LOGONOVA Kragujevac - Profesionalna logopedska usluga"
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 style={{ objectFit: 'contain' }}
                 priority
               />
@@ -47,7 +104,17 @@ export default function Home() {
       <section id="onama" className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 text-center">O nama</h2>
-          <p className="text-gray-700 text-lg text-center">Naš posao je strast i posvećenost. Pomažemo deci da razviju svoje govorne i jezičke veštine kroz individualni pristup i savremene metode. Vaše poverenje nam je važno, a napredak svakog klijenta naš je najveći uspeh.</p>
+          <p className="text-gray-700 text-lg text-center mb-6">Pomažemo deci da razviju svoje govorne i jezičke veštine kroz individualni pristup i savremene metode. Vaše poverenje nam je važno, a napredak svakog klijenta naš je najveći uspeh.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-3 text-primary">Naša misija</h3>
+              <p className="text-gray-700">Pružamo kvalitetnu logopedsku uslugu u Kragujevcu, fokusirajući se na individualne potrebe svakog deteta i njegove porodice. Naš cilj je da svako dete dostigne svoj puni govorno-jezički potencijal.</p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-3 text-primary">Naš pristup</h3>
+              <p className="text-gray-700">Kombinujemo tradicionalne i savremene metode terapije, prilagođavajući se specifičnim potrebama svakog klijenta. Svaka terapija je jedinstvena i prilagođena individualnim potrebama deteta.</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -75,11 +142,29 @@ export default function Home() {
       {/* Kontakt */}
       <section id="kontakt" className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-2xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Kontakt</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8 text-center">Kontaktirajte nas</h2>
           <div className="bg-gray-50 p-8 rounded-lg shadow-md space-y-4">
-            <div className="flex items-center"><FaMapMarkerAlt className="text-primary text-xl mr-4" /><span>Andre Marinković 30, Kragujevac 34000</span></div>
-            <div className="flex items-center"><FaPhone className="text-primary text-xl mr-4" /><span>063 8703545</span></div>
-            <div className="flex items-center"><FaEnvelope className="text-primary text-xl mr-4" /><span>ana.novakovic@logonova.rs</span></div>
+            <div className="flex items-center">
+              <FaMapMarkerAlt className="text-primary text-xl mr-4" />
+              <div>
+                <p className="font-semibold">Adresa:</p>
+                <p>Andre Marinković 30, Kragujevac 34000</p>
+              </div>
+            </div>
+            <div className="flex items-center">
+              <FaPhone className="text-primary text-xl mr-4" />
+              <div>
+                <p className="font-semibold">Telefon:</p>
+                <p><a href="tel:+381638703545" className="hover:text-accent">063 8703545</a></p>
+              </div>
+            </div>
+            <div className="flex items-center">
+              <FaEnvelope className="text-primary text-xl mr-4" />
+              <div>
+                <p className="font-semibold">Email:</p>
+                <p><a href="mailto:ana.novakovic@logonova.rs" className="hover:text-accent">ana.novakovic@logonova.rs</a></p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -87,7 +172,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-primary text-white py-6 mt-8">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; {new Date().getFullYear()} Logopedski kabinet LOGONOVA. Sva prava zadržana.</p>
+          <p>&copy; {new Date().getFullYear()} Logopedski kabinet LOGONOVA Kragujevac. Sva prava zadržana.</p>
         </div>
       </footer>
     </main>
