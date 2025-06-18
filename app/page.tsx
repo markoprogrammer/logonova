@@ -61,7 +61,7 @@ export default function Home() {
       <nav className="flex flex-wrap justify-between items-center px-4 md:px-6 py-4 bg-white shadow-sm sticky top-0 z-10">
         <div className="flex items-center space-x-2">
           <span className="text-2xl md:text-3xl font-bold text-primary">LOGONOVA</span>
-          <span className="ml-2 text-accent font-bold text-xl md:text-2xl">&#9829;</span>
+          <span className="ml-2 text-accent font-bold text-3xl md:text-3xl">&#9829;</span>
         </div>
         <ul className="flex flex-wrap space-x-4 md:space-x-8 text-primary font-semibold text-base md:text-lg mt-2 md:mt-0">
           <li><a href="#pocetna" className="hover:text-accent transition">Početna</a></li>
@@ -86,9 +86,9 @@ export default function Home() {
           </div>
           {/* Image on the right (or above on mobile) */}
           <div className="flex-1 flex justify-center md:justify-end w-full max-w-xs sm:max-w-sm md:max-w-md">
-            <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-96">
+            <div className="relative w-full h-64 sm:h-64 md:h-80 lg:h-96">
               <Image
-                src="/455379179.png"
+                src="/ilustracija.png"
                 alt="Logopedski kabinet LOGONOVA Kragujevac - Profesionalna logopedska usluga"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

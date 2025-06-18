@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: 'LOGONOVA',
     images: [
       {
-        url: '/455379179.png',
+        url: '/ilustracija.png',
         width: 1200,
         height: 630,
         alt: 'Logopedski kabinet LOGONOVA Kragujevac - Profesionalna logopedska usluga',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     canonical: 'https://logonova.rs',
   },
   icons: {
-    icon: '/favicon.svg',
+    icon: '/favicon.png',
   },
 }
 
@@ -50,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="sr">
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.png" type="image/svg+xml" />
         <meta name="geo.region" content="RS" />
         <meta name="geo.placename" content="Kragujevac" />
         <meta name="geo.position" content="44.0165;20.9202" />
