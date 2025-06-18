@@ -86,13 +86,13 @@ export default function Home() {
           </div>
           {/* Image on the right (or above on mobile) */}
           <div className="flex-1 flex justify-center md:justify-end w-full max-w-xs sm:max-w-sm md:max-w-md">
-            <div className="relative w-full h-64 sm:h-64 md:h-80 lg:h-96">
+            <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-96">
               <Image
                 src="/ilustracija.png"
                 alt="Logopedski kabinet LOGONOVA Kragujevac - Profesionalna logopedska usluga"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                style={{ objectFit: 'contain' }}
+                style={{ objectFit: 'cover' }}
                 priority
               />
             </div>
