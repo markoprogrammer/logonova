@@ -1,8 +1,17 @@
+'use client'
+
 import Image from 'next/image'
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaBars, FaTimes } from 'react-icons/fa'
 import Script from 'next/script'
+import { useState } from 'react'
 
 export default function Home() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
   return (
     <main className="min-h-screen bg-white">
       {/* Structured Data for Local Business */}
@@ -58,42 +67,96 @@ export default function Home() {
       />
 
       {/* Navigation */}
-      <nav className="flex flex-wrap justify-between items-center px-4 md:px-6 py-4 bg-white shadow-sm sticky top-0 z-10">
-        <div className="flex items-center space-x-2">
-          <span className="text-2xl md:text-3xl font-bold text-primary">LOGONOVA</span>
-          <span className="ml-2 text-accent font-bold text-3xl md:text-3xl">&#9829;</span>
+      <nav className="px-4 md:px-6 py-4 bg-white shadow-sm sticky top-0 z-50">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <div className="flex items-center space-x-2">
+            <span className="text-2xl md:text-3xl font-bold text-primary">LOGONOVA</span>
+            <span className="ml-2 text-accent font-bold text-xl md:text-2xl">&#9829;</span>
+          </div>
+
+          {/* Desktop Menu */}
+          <ul className="hidden md:flex space-x-3 lg:space-x-8 text-primary font-semibold text-sm lg:text-lg">
+            <li><a href="#pocetna" className="hover:text-accent transition">Početna</a></li>
+            <li><a href="#onama" className="hover:text-accent transition">O nama</a></li>
+            <li><a href="#usluge" className="hover:text-accent transition">Usluge</a></li>
+            <li><a href="/cenovnik" className="hover:text-accent transition">Cenovnik</a></li>
+            <li><a href="/blog" className="hover:text-accent transition">Blog</a></li>
+            <li><a href="#kontakt" className="hover:text-accent transition">Kontakt</a></li>
+          </ul>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden text-primary text-2xl"
+            onClick={toggleMobileMenu}
+          >
+            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
         </div>
-        <ul className="flex flex-wrap space-x-4 md:space-x-8 text-primary font-semibold text-base md:text-lg mt-2 md:mt-0">
-          <li><a href="#pocetna" className="hover:text-accent transition">Početna</a></li>
-          <li><a href="#onama" className="hover:text-accent transition">O nama</a></li>
-          <li><a href="#usluge" className="hover:text-accent transition">Usluge</a></li>
-          <li><a href="#kontakt" className="hover:text-accent transition">Kontakt</a></li>
-        </ul>
+
+        {/* Mobile Menu */}
+        <div 
+          className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t transition-all duration-300 ease-out ${
+            isMobileMenuOpen 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 -translate-y-4 pointer-events-none'
+          }`}
+        >
+          <ul className="py-4">
+            <li><a href="#pocetna" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Početna</a></li>
+            <li><a href="#onama" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>O nama</a></li>
+            <li><a href="#usluge" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Usluge</a></li>
+            <li><a href="/cenovnik" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Cenovnik</a></li>
+            <li><a href="/blog" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Blog</a></li>
+            <li><a href="#kontakt" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Kontakt</a></li>
+          </ul>
+        </div>
       </nav>
 
-      {/* Hero Section - fully responsive, vibrant colors */}
-      <section id="pocetna" className="w-full bg-gray-100 py-10 md:py-16">
-        <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-4 md:px-8 gap-8">
-          {/* Text content */}
-          <div className="flex-1 max-w-xl flex flex-col items-center md:items-start text-center md:text-left mt-6 md:mt-0">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2 leading-tight">Logopedski kabinet LOGONOVA</h1>
-            <h2 className="text-lg sm:text-xl md:text-2xl text-primary font-semibold mb-4">Ana Novaković, master logoped</h2>
-            <p className="text-secondary text-base sm:text-lg md:text-xl font-medium mb-6">Stručna logopedska podrška za decu u Kragujevcu.</p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#kontakt" className="bg-accent text-primary px-8 py-3 rounded-full font-bold shadow hover:bg-yellow-300 transition-colors text-lg md:text-xl">Zakažite termin</a>
-              <a href="tel:+381638703545" className="bg-primary text-white px-8 py-3 rounded-full font-bold shadow hover:bg-primary/90 transition-colors text-lg md:text-xl">063 8703545</a>
+      {/* Hero Section */}
+      <section id="pocetna" className="w-full bg-gray-100 md:py-6">
+        {/* Mobile layout - image as background with overlay */}
+        <div className="md:hidden relative w-full h-[89vh] bg-cover bg-center" style={{backgroundImage: 'url(/IMG_8035.JPG)'}}>
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div className="relative z-10 h-full flex flex-col items-center justify-center text-center pt-72">
+            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2 leading-tight">Logopedski kabinet LOGONOVA</h1>
+            <h2 className="text-lg sm:text-xl text-white font-semibold mb-4">Ana Novaković, master logoped</h2>
+            <p className="text-white text-base sm:text-lg font-medium mb-6">Stručna logopedska podrška za decu u Kragujevcu.</p>
+            <div className="flex flex-col gap-4">
+              <a href="#kontakt" className="bg-accent text-primary px-8 py-3 rounded-full font-bold shadow hover:bg-yellow-300 transition-colors text-sm md:text-lg">Zakažite termin</a>
+              <a href="tel:+381638703545" className="bg-primary text-white px-8 py-3 rounded-full font-bold shadow hover:bg-primary/90 transition-colors text-sm md:text-lg">063 8703545</a>
             </div>
           </div>
-          {/* Image on the right (or above on mobile) */}
-          <div className="flex-1 flex justify-center md:justify-end w-full max-w-xs sm:max-w-sm md:max-w-md">
-            <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-96">
+        </div>
+
+        {/* Desktop layout - original side by side */}
+        <div className="hidden md:flex container mx-auto flex-row items-center justify-between px-4 md:px-8 gap-8">
+          {/* Text content */}
+          <div className="flex-1 max-w-xl flex flex-col items-start text-left">
+            <h1 className="text-3xl md:text-5xl font-bold text-primary mb-2 leading-tight">Logopedski kabinet LOGONOVA</h1>
+            <h2 className="text-xl md:text-2xl text-primary font-semibold mb-4">Ana Novaković, master logoped</h2>
+            <p className="text-secondary text-lg md:text-xl font-medium mb-6">Stručna logopedska podrška za decu u Kragujevcu.</p>
+            <div className="flex flex-row gap-4">
+              <a href="#kontakt" className="bg-accent text-primary px-4 py-1 md:px-6 md:py-2 lg:px-8 lg:py-3 rounded-full font-bold shadow hover:bg-yellow-300 transition-colors text-xs md:text-sm lg:text-xl">Zakažite termin</a>
+              <a href="tel:+381638703545" className="bg-primary text-white px-4 py-1 md:px-6 md:py-2 lg:px-8 lg:py-3 rounded-full font-bold shadow hover:bg-primary/90 transition-colors text-xs md:text-sm lg:text-xl">063 8703545</a>
+            </div>
+          </div>
+                    {/* Image on the right */}
+          <div className="flex-1 flex justify-end w-full max-w-md lg:max-w-xl">
+            <div className="relative w-full">
               <Image
-                src="/ilustracija.png"
+                src="/IMG_8035.JPG"
                 alt="Logopedski kabinet LOGONOVA Kragujevac - Profesionalna logopedska usluga"
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                style={{ objectFit: 'cover' }}
+                width={600}
+                height={400}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 45vw"
+                style={{ 
+                  width: '100%',
+                  height: 'auto',
+                  borderRadius: '12px'
+                }}
                 priority
+                className="shadow-lg"
               />
             </div>
           </div>
