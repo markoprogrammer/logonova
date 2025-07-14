@@ -1,16 +1,9 @@
-'use client'
-
 import Image from 'next/image'
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaBars, FaTimes, FaGoogle, FaExternalLinkAlt } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaGoogle, FaExternalLinkAlt } from 'react-icons/fa'
 import Script from 'next/script'
-import { useState } from 'react'
+import MobileMenu from './components/MobileMenu'
 
 export default function Home() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
 
   return (
     <main className="min-h-screen bg-white">
@@ -213,31 +206,10 @@ export default function Home() {
           </ul>
 
           {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-primary text-2xl"
-            onClick={toggleMobileMenu}
-          >
-            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-          </button>
+          <MobileMenu />
         </div>
 
-        {/* Mobile Menu */}
-        <div 
-          className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t transition-all duration-300 ease-out ${
-            isMobileMenuOpen 
-              ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 -translate-y-4 pointer-events-none'
-          }`}
-        >
-          <ul className="py-4">
-            <li><a href="#pocetna" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Početna</a></li>
-            <li><a href="#onama" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>O nama</a></li>
-            <li><a href="#usluge" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Usluge</a></li>
-            <li><a href="/cenovnik" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Cenovnik</a></li>
-            <li><a href="/blog" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Blog</a></li>
-            <li><a href="#kontakt" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Kontakt</a></li>
-          </ul>
-        </div>
+
       </nav>
 
       {/* Hero Section */}
@@ -251,6 +223,8 @@ export default function Home() {
             sizes="100vw"
             priority
             quality={85}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDAREAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGBP/EACUQAAEDAwMCBwAAAAAAAAAAAAECAwQABREGEiETMUFRYXGBkf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AreM6pp19dYbbPVW1twMKUFpORuVgdB0wAfXg1LHqJJ7mVa7klRCjycjOfrqfrOkdPFxu5WuJFnOJAQHX0B1SA0kDJIPT0/Kg=="
             className="object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
@@ -293,6 +267,8 @@ export default function Home() {
                 }}
                 priority
                 quality={85}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDAREAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAUGBP/EACUQAAEDAwMCBwAAAAAAAAAAAAECAwQABREGEiETMUFRYXGBkf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AreM6pp19dYbbPVW1twMKUFpORuVgdB0wAfXg1LHqJJ7mVa7klRCjycjOfrqfrOkdPFxu5WuJFnOJAQHX0B1SA0kDJIPT0/Kg=="
                 className="shadow-lg"
               />
             </div>

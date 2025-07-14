@@ -80,6 +80,22 @@ export default function RootLayout({
   return (
     <html lang="sr">
       <head>
+        {/* Critical resource preloading */}
+        <link rel="preload" href="/IMG_8035.webp" as="image" type="image/webp" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="" />
+        
+        {/* Critical inline CSS for above-the-fold content */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            .hero-loading { background: linear-gradient(135deg, #e5e7eb 0%, #f3f4f6 100%); }
+            .text-primary { color: #1e3a8a; }
+            .text-accent { color: #fbbf24; }
+            .bg-accent { background-color: #fbbf24; }
+            .bg-primary { background-color: #1e3a8a; }
+          `
+        }} />
+        
         <meta name="geo.region" content="RS" />
         <meta name="geo.placename" content="Kragujevac" />
         <meta name="geo.position" content="44.0165;20.9202" />
