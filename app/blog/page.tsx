@@ -27,7 +27,7 @@ export default function Blog() {
       date: '2. jul 2025',
       author: 'Ana Novaković',
       readTime: '8 min čitanja',
-      image: '/blog-priprema-za-prvi-razred.png'
+      image: '/blog-priprema-za-prvi-razred.webp'
     }
   ]
 
@@ -65,8 +65,10 @@ export default function Blog() {
                       src={post.image}
                       alt={post.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 70vw"
                       className="object-contain hover:scale-105 transition-transform duration-300"
-                      priority
+                      loading="lazy"
+                      quality={80}
                       style={{ backgroundColor: '#f7edd9' }}
                     />
                   </div>

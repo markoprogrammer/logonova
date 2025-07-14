@@ -124,7 +124,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       url: `https://logonova.rs/blog/${params.slug}`,
       images: [
         {
-          url: '/blog-priprema-za-prvi-razred.png',
+          url: '/blog-priprema-za-prvi-razred.webp',
           width: 1200,
           height: 630,
           alt: 'Šta bi bilo poželjno da dete zna pre polaska u prvi razred - ilustracija sa decom i školom',
@@ -135,7 +135,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       card: 'summary_large_image',
       title: post.title,
       description: post.intro,
-      images: ['/blog-priprema-za-prvi-razred.png'],
+      images: ['/blog-priprema-za-prvi-razred.webp'],
     },
     alternates: {
       canonical: `https://logonova.rs/blog/${params.slug}`,
@@ -182,7 +182,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             },
             "image": {
               "@type": "ImageObject",
-              "url": "https://logonova.rs/blog-priprema-za-prvi-razred.png",
+              "url": "https://logonova.rs/blog-priprema-za-prvi-razred.webp",
               "width": 1200,
               "height": 630
             },
@@ -211,12 +211,14 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           {/* Featured Image */}
           <div className="mb-8">
             <Image
-              src="/blog-priprema-za-prvi-razred.png"
+              src="/blog-priprema-za-prvi-razred.webp"
               alt="Šta bi bilo poželjno da dete zna pre polaska u prvi razred - ilustracija sa decom i školom"
               width={1200}
               height={630}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 80vw"
               className="w-full h-auto rounded-lg shadow-lg"
-              priority
+              loading="lazy"
+              quality={80}
             />
           </div>
 

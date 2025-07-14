@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaBars, FaTimes } from 'react-icons/fa'
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaBars, FaTimes, FaGoogle, FaExternalLinkAlt } from 'react-icons/fa'
 import Script from 'next/script'
 import { useState } from 'react'
 
@@ -23,7 +23,7 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Logopedski kabinet LOGONOVA Kragujevac",
-            "image": "https://logonova.rs/455379179.png",
+            "image": "https://logonova.rs/IMG_8035.webp",
             "description": "Profesionalna logopedska usluga u Kragujevcu. Individualni pristup, dijagnostika i terapija govorno-jezičkih poteškoća za decu.",
             "address": {
               "@type": "PostalAddress",
@@ -60,8 +60,135 @@ export default function Home() {
             "medicalSpecialty": "Speech Therapy",
             "sameAs": [
               "https://www.facebook.com/logonova",
-              "https://www.instagram.com/logonova"
+              "https://www.instagram.com/logonova",
+              "https://share.google/YPEa08P7419vvdXNk"
             ]
+          })
+        }}
+      />
+
+      {/* Sitelinks Navigation Structure */}
+      <Script
+        id="sitelinks-searchbox"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://logonova.rs",
+            "name": "Logopedski kabinet LOGONOVA Kragujevac",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://logonova.rs/blog?search={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })
+        }}
+      />
+
+      {/* Breadcrumb Navigation */}
+      <Script
+        id="breadcrumb-navigation"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Početna",
+                "item": "https://logonova.rs"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Cenovnik",
+                "item": "https://logonova.rs/cenovnik"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Blog",
+                "item": "https://logonova.rs/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Kontakt",
+                "item": "https://logonova.rs#kontakt"
+              }
+            ]
+          })
+        }}
+      />
+
+      {/* Organization structured data for sitelinks */}
+      <Script
+        id="organization-structure"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Logopedski kabinet LOGONOVA",
+            "alternateName": "LOGONOVA Kragujevac",
+            "url": "https://logonova.rs",
+            "logo": "https://logonova.rs/favicon.png",
+            "image": "https://logonova.rs/IMG_8035.webp",
+            "description": "Profesionalni logopedski kabinet u Kragujevcu. Ana Novaković, master logoped.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Andre Marinković 30",
+              "addressLocality": "Kragujevac",
+              "postalCode": "34000",
+              "addressCountry": "RS"
+            },
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+381638703545",
+                "contactType": "customer service",
+                "areaServed": "RS",
+                "availableLanguage": ["Serbian"]
+              }
+            ],
+            "sameAs": [
+              "https://www.facebook.com/logonova",
+              "https://www.instagram.com/logonova",
+              "https://share.google/YPEa08P7419vvdXNk"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Logopedske usluge",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Logopedska dijagnostika",
+                    "description": "Detaljna procena govorno-jezičkih sposobnosti"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service", 
+                    "name": "Individualni tretmani",
+                    "description": "Terapija govorno-jezičkih poteškoća"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Savetovanje roditelja",
+                    "description": "Podrška i smernice za roditelje"
+                  }
+                }
+              ]
+            }
           })
         }}
       />
@@ -115,8 +242,17 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="pocetna" className="w-full bg-gray-100 md:py-6">
-        {/* Mobile layout - image as background with overlay */}
-        <div className="md:hidden relative w-full h-[89vh] bg-cover bg-center" style={{backgroundImage: 'url(/IMG_8035.JPG)'}}>
+        {/* Mobile layout - optimized image with overlay */}
+        <div className="md:hidden relative w-full h-[89vh] overflow-hidden">
+          <Image
+            src="/IMG_8035.webp"
+            alt="Logopedski kabinet LOGONOVA Kragujevac"
+            fill
+            sizes="100vw"
+            priority
+            quality={85}
+            className="object-cover"
+          />
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           <div className="relative z-10 h-full flex flex-col items-center justify-center text-center pt-72">
             <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2 leading-tight">Logopedski kabinet LOGONOVA</h1>
@@ -145,17 +281,18 @@ export default function Home() {
           <div className="flex-1 flex justify-end w-full max-w-md lg:max-w-xl">
             <div className="relative w-full">
               <Image
-                src="/IMG_8035.JPG"
+                src="/IMG_8035.webp"
                 alt="Logopedski kabinet LOGONOVA Kragujevac - Profesionalna logopedska usluga"
                 width={600}
                 height={400}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 45vw"
+                sizes="(max-width: 768px) 0vw, (max-width: 1024px) 50vw, 45vw"
                 style={{ 
                   width: '100%',
                   height: 'auto',
                   borderRadius: '12px'
                 }}
                 priority
+                quality={85}
                 className="shadow-lg"
               />
             </div>
@@ -209,9 +346,27 @@ export default function Home() {
           <div className="bg-gray-50 p-8 rounded-lg shadow-md space-y-4">
             <div className="flex items-center">
               <FaMapMarkerAlt className="text-primary text-xl mr-4" />
-              <div>
+              <div className="flex-1">
                 <p className="font-semibold">Adresa:</p>
-                <p>Andre Marinković 30, Kragujevac 34000</p>
+                <div className="flex items-center gap-2">
+                  <a 
+                    href="https://maps.google.com/?q=Andre+Marinković+30,+Kragujevac+34000" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="hover:text-accent cursor-pointer"
+                  >
+                    Andre Marinković 30, Kragujevac 34000
+                  </a>
+                  <a 
+                    href="https://share.google/YPEa08P7419vvdXNk" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-primary hover:text-accent transition-colors"
+                    title="Pogledajte na Google Maps"
+                  >
+                    <FaExternalLinkAlt className="text-sm" />
+                  </a>
+                </div>
               </div>
             </div>
             <div className="flex items-center">
@@ -226,6 +381,13 @@ export default function Home() {
               <div>
                 <p className="font-semibold">Email:</p>
                 <p><a href="mailto:ana.novakovic@logonova.rs" className="hover:text-accent">ana.novakovic@logonova.rs</a></p>
+              </div>
+            </div>
+            <div className="flex items-center">
+              <FaGoogle className="text-primary text-xl mr-4" />
+              <div>
+                <p className="font-semibold">Google profil:</p>
+                <p><a href="https://share.google/YPEa08P7419vvdXNk" target="_blank" rel="noopener noreferrer" className="hover:text-accent">Pogledajte naš Google profil</a></p>
               </div>
             </div>
           </div>

@@ -8,10 +8,11 @@ export const metadata: Metadata = {
     template: '%s | LOGONOVA Kragujevac'
   },
   description: 'Profesionalni logopedski kabinet u Kragujevcu. Profesionalna logopedska usluga za decu - dijagnostika, terapija i savetovanje. Individualni pristup i savremene metode. Zakazivanje: 063 8703545',
-  keywords: 'logoped Kragujevac, logopedski kabinet Kragujevac, Ana Novakovic logoped, govorno-jezičke poteškoće, terapija govora, logopedija Kragujevac, logopedski tretman, govorno-jezički razvoj, logoped za decu Kragujevac, logopedska terapija Kragujevac, priprema za školu, fonološka svesnost, grafomotorika',
+  keywords: 'logoped Kragujevac, logopedski kabinet Kragujevac, Ana Novakovic logoped, govorno-jezičke poteškoće, terapija govora, logopedija Kragujevac, logopedski tretman, govorno-jezički razvoj, logoped za decu Kragujevac, logopedska terapija Kragujevac, priprema za školu, fonološka svesnost, grafomotorika, najbolji logoped Kragujevac, logoped centar Kragujevac, logopedska dijagnostika, govorna terapija deca',
   authors: [{ name: 'Ana Novakovic', url: 'https://logonova.rs' }],
   creator: 'Ana Novakovic',
   publisher: 'LOGONOVA',
+  category: 'Healthcare',
   openGraph: {
     title: 'Logopedski kabinet LOGONOVA Kragujevac | Ana Novakovic - Master Logoped',
     description: 'Profesionalni logopedski kabinet u Kragujevcu. Profesionalna logopedska usluga za decu - dijagnostika, terapija i savetovanje. Individualni pristup i savremene metode.',
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     url: 'https://logonova.rs',
     images: [
       {
-        url: '/IMG_8035.JPG',
+        url: '/IMG_8035.webp',
         width: 1200,
         height: 630,
         alt: 'Logopedski kabinet LOGONOVA Kragujevac - Profesionalna logopedska usluga',
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Logopedski kabinet LOGONOVA Kragujevac',
     description: 'Profesionalna logopedska usluga za decu u Kragujevcu. Individualni pristup i savremene metode.',
-    images: ['/IMG_8035.JPG'],
+    images: ['/IMG_8035.webp'],
   },
   robots: {
     index: true,
@@ -65,6 +66,10 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico',
   },
   manifest: '/manifest.json',
+  other: {
+    'google-site-verification': 'Q5qUMMwzXOJ9j0n5KJVbhTP4z1CPRxMDACLBVbWIGpM',
+    'format-detection': 'telephone=no',
+  },
 }
 
 export default function RootLayout({
