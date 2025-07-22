@@ -74,7 +74,7 @@ export default function NasTim() {
                   Diplomirala 2013. godine na Fakultetu za specijalnu edukaciju i rehabilitaciju u Beogradu nakon čega stiče zvanje dipl.defektolog-logoped (potvrda o izjednačavanju sa akademskim nazivom Master drugog stepena studija; od 2014.god.)
                 </p>
                 <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                    Pripravnički staž započinje 2013.god. u razvojnom savetovalištvu doma zdravlja u Kragujevcu, u trajanju od godinu dana nakon čega polaže državni ispit u Ministarstvu zdravlja Republike Srbije.
+                    Pripravnički staž započinje 2013.god. u razvojnom savetovalištvu Doma zdravlja u Kragujevcu, u trajanju od godinu dana nakon čega polaže državni ispit u Ministarstvu zdravlja Republike Srbije.
                 </p>
                                  <p className="text-gray-700 text-lg mb-6 leading-relaxed">
                      2018.god. upisuje dvosemestralnu edukaciju na Institutu za mentalno zdravlje u Beogradu i stiče sertifikat za primenu Opšte i specifične reedukacije psihomotorike sa opštom defektološkom dijagnostikom i relaksacijom, čime upotpunjuje postojeća znanja i poboljšava kvalitet usluga.
