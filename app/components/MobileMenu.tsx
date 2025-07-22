@@ -31,6 +31,7 @@ export default function MobileMenu() {
         <ul className="py-4">
           <li><a href="#pocetna" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Početna</a></li>
           <li><a href="#onama" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>O nama</a></li>
+          <li><a href="/nas-tim" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Naš tim</a></li>
           <li><a href="#usluge" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Usluge</a></li>
           <li><a href="/cenovnik" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Cenovnik</a></li>
           <li><a href="/blog" className="block px-6 py-3 text-primary font-semibold hover:bg-gray-50 hover:text-accent transition" onClick={() => setIsMobileMenuOpen(false)}>Blog</a></li>

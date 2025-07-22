@@ -97,18 +97,24 @@ export default function Home() {
               {
                 "@type": "ListItem",
                 "position": 2,
+                "name": "Naš tim",
+                "item": "https://logonova.rs/nas-tim"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
                 "name": "Cenovnik",
                 "item": "https://logonova.rs/cenovnik"
               },
               {
                 "@type": "ListItem",
-                "position": 3,
+                "position": 4,
                 "name": "Blog",
                 "item": "https://logonova.rs/blog"
               },
               {
                 "@type": "ListItem",
-                "position": 4,
+                "position": 5,
                 "name": "Kontakt",
                 "item": "https://logonova.rs#kontakt"
               }
@@ -199,6 +205,7 @@ export default function Home() {
           <ul className="hidden md:flex space-x-3 lg:space-x-8 text-primary font-semibold text-sm lg:text-lg">
             <li><a href="#pocetna" className="hover:text-accent transition">Početna</a></li>
             <li><a href="#onama" className="hover:text-accent transition">O nama</a></li>
+            <li><a href="/nas-tim" className="hover:text-accent transition">Naš tim</a></li>
             <li><a href="#usluge" className="hover:text-accent transition">Usluge</a></li>
             <li><a href="/cenovnik" className="hover:text-accent transition">Cenovnik</a></li>
             <li><a href="/blog" className="hover:text-accent transition">Blog</a></li>

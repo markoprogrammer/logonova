@@ -3,12 +3,12 @@ import { FaArrowLeft, FaCheckCircle } from 'react-icons/fa'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Cenovnik - Logopedske usluge Kragujevac',
-  description: 'Cenovnik logopedskih usluga u Kragujevcu. Prvi pregled, tretmani, savetovanje i specijalizirane usluge. Transparentne cene za kvalitetnu logopedsku uslugu.',
-  keywords: 'cenovnik logoped Kragujevac, cena logopedskih usluga, pregled logoped, tretman govora cena, logopedska terapija cena, savetovanje logoped',
+  title: 'Cenovnik - Privatni logoped i defektolog Kragujevac',
+  description: 'Cenovnik privatnog logopedskog kabineta LOGONOVA u Kragujevcu. Privatni logoped, defektolog, pregledi, tretmani i savetovanje. Transparentne cene za privatnu logopedsku i defektološku uslugu.',
+  keywords: 'privatni logoped cenovnik Kragujevac, privatni defektolog cena, privatna logopedska usluga cena, privatni tretman govora cena, privatna logopedska terapija cena, privatno savetovanje logoped, privatni psiholog cena Kragujevac, privatna dijagnostika govora',
   openGraph: {
-    title: 'Cenovnik - Logopedske usluge Kragujevac | LOGONOVA',
-    description: 'Cenovnik logopedskih usluga u Kragujevcu. Transparentne cene za kvalitetnu logopedsku uslugu.',
+    title: 'Cenovnik - Privatni logoped i defektolog Kragujevac | LOGONOVA',
+    description: 'Cenovnik privatnog logopedskog kabineta u Kragujevcu. Transparentne cene za privatnu logopedsku i defektološku uslugu.',
     type: 'website',
     url: 'https://logonova.rs/cenovnik',
   },
@@ -108,7 +108,7 @@ export default function Cenovnik() {
           {/* Tretmani */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-primary text-center mb-12">Tretmani</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               
               {/* Tretman 30min */}
               <div className="bg-gray-50 rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
@@ -128,6 +128,20 @@ export default function Cenovnik() {
               <div className="bg-gray-50 rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-bold text-primary mb-4">Tretman 1 sat</h3>
                 <div className="text-3xl font-bold text-accent mb-2">1.700</div>
+                <div className="text-gray-600">dinara</div>
+              </div>
+
+              {/* Logopedsko-defektološki tretman 30min */}
+              <div className="bg-white rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-bold text-primary mb-4">Logopedsko-defektološki tretman 30 minuta</h3>
+                <div className="text-3xl font-bold text-accent mb-2">1.600</div>
+                <div className="text-gray-600">dinara</div>
+              </div>
+
+              {/* Logopedsko-defektološki tretman 45min */}
+              <div className="bg-white rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-bold text-primary mb-4">Logopedsko-defektološki tretman 45 minuta</h3>
+                <div className="text-3xl font-bold text-accent mb-2">2.000</div>
                 <div className="text-gray-600">dinara</div>
               </div>
 
