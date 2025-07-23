@@ -141,7 +141,7 @@ export default function Cenovnik() {
               {/* Logopedsko-defektološki tretman 45min */}
               <div className="bg-white rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-bold text-primary mb-4">Logopedsko-defektološki tretman 45 minuta</h3>
-                <div className="text-3xl font-bold text-accent mb-2">2.000</div>
+                <div className="text-3xl font-bold text-accent mb-2">1.900</div>
                 <div className="text-gray-600">dinara</div>
               </div>
 
