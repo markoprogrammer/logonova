@@ -136,7 +136,7 @@ export default function Home() {
             "url": "https://logonova.rs",
             "logo": "https://logonova.rs/favicon.png",
             "image": "https://logonova.rs/IMG_8035.webp",
-            "description": "Profesionalni logopedski kabinet u Kragujevcu. Ana Novaković, master logoped.",
+            "description": "Privatni logopedski kabinet u Kragujevcu. Ana Novaković, master defektologije logoped i Marijana Mrmošanin, master defektologije i logoped.",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Andre Marinković 30",
@@ -157,6 +157,20 @@ export default function Home() {
               "https://www.facebook.com/logonova",
               "https://www.instagram.com/logonova",
               "https://share.google/YPEa08P7419vvdXNk"
+            ],
+            "employee": [
+              {
+                "@type": "Person",
+                "name": "Ana Novaković",
+                "jobTitle": "Master defektologije logoped",
+                "description": "Osnivač kabineta LOGONOVA, privatni logoped sa specijalizacijom u reedukaciji psihomotorike"
+              },
+              {
+                "@type": "Person",
+                "name": "Marijana Mrmošanin",
+                "jobTitle": "Dipl. defektolog-logoped, reedukator psihomotorike",
+                "description": "Klinički defektolog sa 15+ godina iskustva u UKC Kragujevac, specijalizovana za autizam, disleksiju, kasno progovaranje i psihomotoriku"
+              }
             ],
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
@@ -238,7 +252,7 @@ export default function Home() {
           <div className="relative z-10 h-full flex flex-col items-center justify-center text-center pt-72">
             <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2 leading-tight">Logopedski kabinet LOGONOVA</h1>
             <h2 className="text-lg sm:text-xl text-white font-semibold mb-4">Ana Novaković, master logoped</h2>
-            <p className="text-white text-base sm:text-lg font-medium mb-6">Stručna logopedska podrška za decu u Kragujevcu.</p>
+            <p className="text-white text-base sm:text-lg font-medium mb-6">Stručna logopedska podrška za decu.</p>
             <div className="flex flex-col gap-4">
               <a href="#kontakt" className="bg-accent text-primary px-8 py-3 rounded-full font-bold shadow hover:bg-yellow-300 transition-colors text-sm md:text-lg">Zakažite termin</a>
               <a href="tel:+381638703545" className="bg-primary text-white px-8 py-3 rounded-full font-bold shadow hover:bg-primary/90 transition-colors text-sm md:text-lg">063 8703545</a>
@@ -252,7 +266,7 @@ export default function Home() {
           <div className="flex-1 max-w-xl flex flex-col items-start text-left">
             <h1 className="text-3xl md:text-5xl font-bold text-primary mb-2 leading-tight">Logopedski kabinet LOGONOVA</h1>
             <h2 className="text-xl md:text-2xl text-primary font-semibold mb-4">Ana Novaković, master logoped</h2>
-            <p className="text-secondary text-lg md:text-xl font-medium mb-6">Stručna logopedska podrška za decu u Kragujevcu.</p>
+            <p className="text-secondary text-lg md:text-xl font-medium mb-6">Stručna logopedska podrška za decu.</p>
             <div className="flex flex-row gap-4">
               <a href="#kontakt" className="bg-accent text-primary px-4 py-1 md:px-6 md:py-2 lg:px-8 lg:py-3 rounded-full font-bold shadow hover:bg-yellow-300 transition-colors text-xs md:text-sm lg:text-xl">Zakažite termin</a>
               <a href="tel:+381638703545" className="bg-primary text-white px-4 py-1 md:px-6 md:py-2 lg:px-8 lg:py-3 rounded-full font-bold shadow hover:bg-primary/90 transition-colors text-xs md:text-sm lg:text-xl">063 8703545</a>
@@ -287,7 +301,7 @@ export default function Home() {
       <section id="onama" className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 text-center">O nama</h2>
-          <p className="text-gray-700 text-lg text-center mb-6">Pomažemo deci da razviju svoje govorne i jezičke veštine kroz individualni pristup i savremene metode. Vaše poverenje nam je važno, a napredak svakog klijenta naš je najveći uspeh.</p>
+          <p className="text-gray-700 text-lg text-center mb-6">Pomažemo deci da razviju svoje govorne i jezičke veštine kroz individualni pristup i savremene metode. Naš <a href="/nas-tim" className="text-accent font-semibold hover:text-primary transition">stručni tim Ana Novaković i Marijana Mrmošanin</a> donosi dugogodišnje iskustvo u privatnoj i kliničkoj praksi. Vaše poverenje nam je važno, a napredak svakog klijenta naš je najveći uspeh.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-3 text-primary">Naša misija</h3>

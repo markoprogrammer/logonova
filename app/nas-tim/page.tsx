@@ -123,7 +123,7 @@ export default function NasTim() {
                 <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg">
                   <Image
                     src="/marijana-mrmosanin.jpg"
-                    alt="Marijana Mrmošanin - Dipl. defektolog-logoped, reedukator psihomotorike"
+                    alt="Marijana Mrmošanin privatni defektolog logoped Kragujevac"
                     width={256}
                     height={256}
                     className="w-full h-full object-cover object-center"

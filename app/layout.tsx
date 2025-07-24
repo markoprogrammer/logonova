@@ -7,15 +7,18 @@ export const metadata: Metadata = {
     default: 'Privatni logopedski kabinet LOGONOVA Kragujevac | Ana Novakovic - Master defektologije logoped',
     template: '%s | LOGONOVA Kragujevac'
   },
-  description: 'Privatni logopedski kabinet LOGONOVA u Kragujevcu. Profesionalna logopedska i defektološka usluga za decu - dijagnostika, terapija i savetovanje. Privatni logoped i defektolog sa individualnim pristupom. Zakazivanje: 063 8703545',
-  keywords: 'privatni logoped Kragujevac, privatni defektolog Kragujevac, privatni logopedski kabinet Kragujevac, privatna logopedska praksa, privatni tretman govora, logoped Kragujevac, logopedski kabinet Kragujevac, Ana Novakovic master defektologije logoped, govorno-jezičke poteškoće, terapija govora, logopedija Kragujevac, logopedski tretman, govorno-jezički razvoj, logoped za decu Kragujevac, logopedska terapija Kragujevac, privatna defektološka dijagnostika, privatni psiholog Kragujevac, priprema za školu, fonološka svesnost, grafomotorika, najbolji logoped Kragujevac, privatni logoped centar Kragujevac, logopedska dijagnostika, govorna terapija deca, privatna psihomotorna terapija',
-  authors: [{ name: 'Ana Novakovic', url: 'https://logonova.rs' }],
+  description: 'Privatni logopedski kabinet LOGONOVA u Kragujevcu sa stručnim timom Ana Novaković i Marijana Mrmošanin. Profesionalna logopedska i defektološka usluga za decu - dijagnostika, terapija i savetovanje. Privatni logoped i defektolog sa individualnim pristupom. Zakazivanje: 063 8703545',
+  keywords: 'privatni logoped Kragujevac, privatni defektolog Kragujevac, Marijana Mrmošanin defektolog logoped, Marijana Mrmošanin reedukator psihomotorike Kragujevac, UKC Kragujevac defektolog, privatni logopedski kabinet Kragujevac, privatna logopedska praksa, privatni tretman govora, logoped Kragujevac, logopedski kabinet Kragujevac, Ana Novakovic master defektologije logoped, Marijana Mrmošanin autizam, Marijana Mrmošanin disleksija, govorno-jezičke poteškoće, terapija govora, logopedija Kragujevac, logopedski tretman, govorno-jezički razvoj, logoped za decu Kragujevac, logopedska terapija Kragujevac, privatna defektološka dijagnostika, privatni psiholog Kragujevac, reedukacija psihomotorike Kragujevac, klinički defektolog Kragujevac, priprema za školu, fonološka svesnost, grafomotorika, najbolji logoped Kragujevac, privatni logoped centar Kragujevac, logopedska dijagnostika, govorna terapija deca, privatna psihomotorna terapija, kasno progovaranje Kragujevac, mentalna ometenost logoped, tikovi tretman Kragujevac, mucanje terapija',
+  authors: [
+    { name: 'Ana Novakovic', url: 'https://logonova.rs' },
+    { name: 'Marijana Mrmošanin', url: 'https://logonova.rs/nas-tim' }
+  ],
   creator: 'Ana Novakovic',
   publisher: 'LOGONOVA',
   category: 'Healthcare',
   openGraph: {
     title: 'Privatni logopedski kabinet LOGONOVA Kragujevac | Ana Novakovic - Master defektologije logoped',
-    description: 'Privatni logopedski kabinet LOGONOVA u Kragujevcu. Profesionalna logopedska i defektološka usluga za decu - dijagnostika, terapija i savetovanje. Privatni logoped i defektolog sa individualnim pristupom.',
+    description: 'Privatni logopedski kabinet LOGONOVA u Kragujevcu sa stručnim timom Ana Novaković i Marijana Mrmošanin. Profesionalna logopedska i defektološka usluga za decu - dijagnostika, terapija i savetovanje.',
     type: 'website',
     locale: 'sr_RS',
     siteName: 'LOGONOVA',
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Privatni logopedski kabinet LOGONOVA Kragujevac',
-    description: 'Privatni logopedski kabinet za decu u Kragujevcu. Privatni logoped i defektolog sa individualnim pristupom.',
+    description: 'Privatni logopedski kabinet za decu u Kragujevcu. Tim: Ana Novaković i Marijana Mrmošanin, privatni logoped i defektolog.',
     images: ['/IMG_8035.webp'],
   },
   robots: {
