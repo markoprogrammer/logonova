@@ -1,15 +1,16 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import Script from 'next/script'
 import { FaArrowLeft, FaCalendar, FaUser, FaArrowRight } from 'react-icons/fa'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Blog - Saveti za govorno-jezički razvoj dece',
-  description: 'Korisni saveti i informacije o govorno-jezičkom razvoju dece. Stručni tekstovi logopeda iz Kragujevca o pripremi za prvi razred, terapiji govora i jezičkom razvoju.',
-  keywords: 'blog logoped, saveti za govor, jezički razvoj, priprema za prvi razred, logopedski saveti, govorno-jezičke veštine, fonološka svesnost, Kragujevac',
+  description: 'Stručni blog logopeda iz Kragujevca. Saveti o razvoju govora, dislaliji, pripremi za prvi razred, školskoj zrelosti i logopedskoj terapiji. Kategorije: Razvoj govora, Školska zrelost.',
+  keywords: 'blog logoped Kragujevac, razvoj govora deca, dislalija saveti, priprema za prvi razred, školska zrelost, fonološka svesnost, logopedska terapija, razvojne norme, govorno-jezičke veštine, grafomotorika, privatni logoped blog, defektolog saveti, govorna terapija deca',
   openGraph: {
     title: 'Blog - Saveti za govorno-jezički razvoj dece | LOGONOVA',
-    description: 'Korisni saveti i informacije o govorno-jezičkom razvoju dece. Stručni tekstovi logopeda iz Kragujevca.',
+    description: 'Stručni blog logopeda iz Kragujevca. Kategorije: Razvoj govora, Školska zrelost. Saveti o dislaliji, pripremi za prvi razred i logopedskoj terapiji.',
     type: 'website',
     locale: 'sr_RS',
     siteName: 'LOGONOVA',
@@ -26,9 +27,11 @@ export default function Blog() {
       id: 'razvoj-govora-i-glasovi',
       title: 'Razvoj govora i pravilno izgovaranje glasova kod dece',
       excerpt: 'Za posetu logopedu nikada nije prerano, jer je govor složen proces koji se razvija od rođenja. Sveobuhvatan vodič kroz uzroke dislalije, razvojne norme i faktore koji utiču na uspešnost terapije...',
-      date: '15. decembar 2024',
+      date: '27. jul 2025',
       author: 'Ana Novaković',
       readTime: '12 min čitanja',
+      category: 'Razvoj govora',
+      tags: ['dislalija', 'razvojne norme', 'logopedska terapija'],
       image: '/blog-post-razvoj-govora.webp'
     },
     {
@@ -38,12 +41,51 @@ export default function Blog() {
       date: '2. jul 2025',
       author: 'Ana Novaković',
       readTime: '8 min čitanja',
+      category: 'Školska zrelost',
+      tags: ['prvi razred', 'priprema za školu', 'grafomotorika'],
       image: '/blog-priprema-za-prvi-razred.webp'
     }
   ]
 
   return (
     <main className="min-h-screen bg-white">
+      {/* Blog Structured Data */}
+      <Script
+        id="blog-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "LOGONOVA Blog - Saveti za govorno-jezički razvoj",
+            "description": "Stručni blog logopeda iz Kragujevca sa savetima o razvoju govora, dislaliji, pripremi za prvi razred i logopedskoj terapiji.",
+            "url": "https://logonova.rs/blog",
+            "publisher": {
+              "@type": "Organization",
+              "name": "LOGONOVA",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://logonova.rs/favicon.png"
+              }
+            },
+            "blogPost": blogPosts.map(post => ({
+              "@type": "BlogPosting",
+              "headline": post.title,
+              "description": post.excerpt,
+              "url": `https://logonova.rs/blog/${post.id}`,
+              "datePublished": post.date === '27. jul 2025' ? '2025-07-27' : '2025-07-02',
+              "author": {
+                "@type": "Person",
+                "name": post.author
+              },
+              "image": `https://logonova.rs${post.image}`,
+              "articleSection": post.category,
+              "keywords": post.tags.join(', ')
+            }))
+          })
+        }}
+      />
+
       {/* Navigation */}
       <nav className="flex flex-wrap justify-between items-center px-4 md:px-6 py-4 bg-white shadow-sm sticky top-0 z-100">
         <Link href="/" className="flex items-center space-x-2">
@@ -85,7 +127,7 @@ export default function Blog() {
                   </div>
                 )}
                 <div className="p-8">
-                  <div className="flex items-center gap-6 text-gray-500 mb-4">
+                  <div className="flex items-center gap-6 text-gray-500 mb-4 flex-wrap">
                     <div className="flex items-center gap-2">
                       <FaCalendar />
                       <span>{post.date}</span>
@@ -97,15 +139,27 @@ export default function Blog() {
                     <div className="text-sm">
                       {post.readTime}
                     </div>
+                    <div className="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                      {post.category}
+                    </div>
                   </div>
                   
                   <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 leading-tight">
                     {post.title}
                   </h2>
                   
-                  <p className="text-gray-600 text-lg leading-relaxed mb-6">
+                  <p className="text-gray-600 text-lg leading-relaxed mb-4">
                     {post.excerpt}
                   </p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {post.tags.slice(0, 3).map((tag, index) => (
+                      <span key={index} className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-sm">
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
                   
                   <Link 
                     href={`/blog/${post.id}`}

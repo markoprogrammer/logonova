@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import Script from 'next/script'
 import { FaArrowLeft, FaCalendar, FaUser } from 'react-icons/fa'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+import SocialShare from '../components/SocialShare'
 
 const blogPosts = {
   'razvoj-govora-i-glasovi': {
@@ -10,6 +12,8 @@ const blogPosts = {
     date: '27. jul 2025',
     author: 'Ana Novaković',
     readTime: '12 min čitanja',
+    category: 'Razvoj govora',
+    tags: ['dislalija', 'razvojne norme', 'logopedska terapija', 'razvoj deteta'],
     intro: 'Za posetu logopedu nikada nije prerano, jer je govor složen proces koji se razvija od rođenja. Ukoliko roditelji imaju pitanja i nedoumice, treba da potražuju pomoć stručnjaka. Ovo je sveobuhvatan vodič kroz razvoj govora i izgovaranje glasova kod dece.',
     content: [
       {
@@ -170,6 +174,8 @@ const blogPosts = {
     date: '2. jul 2025',
     author: 'Ana Novaković',
     readTime: '8 min čitanja',
+    category: 'Školska zrelost',
+    tags: ['prvi razred', 'priprema za školu', 'školska zrelost', 'grafomotorika', 'fonološka svesnost'],
     intro: 'Polazak u prvi razred predstavlja važan korak u životu svakog deteta. Kako bismo dete što bolje pripremili za ovu veliku promenu, poželjno je da pre polaska u prvi razred savlada određene veštine i znanja iz različitih oblasti:',
     content: [
       {
@@ -318,46 +324,120 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Article Structured Data */}
-      <script
+      {/* Enhanced Structured Data */}
+      <Script
+        id="enhanced-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "headline": post.title,
-            "description": post.intro,
-            "author": {
-              "@type": "Person",
-              "name": post.author,
-              "url": "https://logonova.rs"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "LOGONOVA",
-              "logo": {
+          __html: JSON.stringify([
+            // Article Schema
+            {
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": post.title,
+              "description": post.intro,
+              "author": {
+                "@type": "Person",
+                "name": post.author,
+                "url": "https://logonova.rs/nas-tim",
+                "jobTitle": params.slug === 'razvoj-govora-i-glasovi' ? "Master defektologije logoped" : "Master defektologije logoped",
+                "worksFor": {
+                  "@type": "Organization",
+                  "name": "LOGONOVA",
+                  "url": "https://logonova.rs"
+                },
+                "image": "https://logonova.rs/ana-novakovic.webp"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "LOGONOVA",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://logonova.rs/favicon.png"
+                },
+                "url": "https://logonova.rs"
+              },
+              "datePublished": params.slug === 'razvoj-govora-i-glasovi' ? "2025-07-27" : "2025-07-02",
+              "dateModified": params.slug === 'razvoj-govora-i-glasovi' ? "2025-07-27" : "2025-07-02",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": `https://logonova.rs/blog/${params.slug}`
+              },
+              "image": {
                 "@type": "ImageObject",
-                "url": "https://logonova.rs/favicon.png"
+                "url": params.slug === 'razvoj-govora-i-glasovi' ? "https://logonova.rs/blog-post-razvoj-govora.webp" : "https://logonova.rs/blog-priprema-za-prvi-razred.webp",
+                "width": 1200,
+                "height": 630
+              },
+              "articleSection": "Govorno-jezički razvoj",
+              "keywords": params.slug === 'razvoj-govora-i-glasovi' 
+                ? "razvoj govora, dislalija, razvojne norme, logoped, izgovor glasova, govorna terapija, funkcionalni uzroci, organski uzroci"
+                : "priprema za prvi razred, govorno-jezički razvoj, logoped, školska zrelost, fonološka svesnost",
+              "inLanguage": "sr",
+              "wordCount": params.slug === 'razvoj-govora-i-glasovi' ? 2500 : 1800,
+              "about": {
+                "@type": "Thing",
+                "name": params.slug === 'razvoj-govora-i-glasovi' ? "Razvoj govora kod dece" : "Priprema za prvi razred",
+                "description": params.slug === 'razvoj-govora-i-glasovi' ? "Informacije o razvoju govora, dislaliji i logopedskoj terapiji" : "Veštine potrebne za uspešan početak školovanja"
               }
             },
-            "datePublished": params.slug === 'razvoj-govora-i-glasovi' ? "2025-07-27" : "2025-07-02",
-            "dateModified": params.slug === 'razvoj-govora-i-glasovi' ? "2025-07-27" : "2025-07-02",
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": `https://logonova.rs/blog/${params.slug}`
+            // Breadcrumb Schema
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Početna",
+                  "item": "https://logonova.rs"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Blog",
+                  "item": "https://logonova.rs/blog"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": post.title,
+                  "item": `https://logonova.rs/blog/${params.slug}`
+                }
+              ]
             },
-            "image": {
-              "@type": "ImageObject",
-              "url": params.slug === 'razvoj-govora-i-glasovi' ? "https://logonova.rs/blog-post-razvoj-govora.webp" : "https://logonova.rs/blog-priprema-za-prvi-razred.webp",
-              "width": 1200,
-              "height": 630
-            },
-            "articleSection": "Govorno-jezički razvoj",
-            "keywords": params.slug === 'razvoj-govora-i-glasovi' 
-              ? "razvoj govora, dislalija, razvojne norme, logoped, izgovor glasova, govorna terapija, funkcionalni uzroci, organski uzroci"
-              : "priprema za prvi razred, govorno-jezički razvoj, logoped, školska zrelost, fonološka svesnost",
-            "inLanguage": "sr"
-          })
+            // FAQ Schema for developmental milestones
+            ...(params.slug === 'razvoj-govora-i-glasovi' ? [{
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Kada dete treba da počne da govori?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Prva reč sa značenjem se javlja između 9-15 meseci. Do 2 godine dete treba da koristi oko 50 reči, a do 3 godine da se rečenica sastoji od 3-4 reči."
+                  }
+                },
+                {
+                  "@type": "Question", 
+                  "name": "Kada su svi glasovi pravilno usvojeni?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Na uzrastu od 5,5 godina dete mora da izgovara pravilno sve glasove maternjeg jezika. Glasovi se usvajaju postepeno: A,E,I,O,U,P,B,M,N,K,G,T,D,V,F,H,J do 3,5 godina; S,Z,C,LJ,NJ,R do 4,5 godina; Š,Ž,DZ,Č,Đ,Ć do 5,5 godina."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Kada treba posety logopedu?",
+                  "acceptedAnswer": {
+                    "@type": "Answer", 
+                    "text": "Za posetu logopedu nikada nije prerano. Treba potražiti pomoć ako dete ne izgovara određene glasove za svoj uzrast, zamenjuje glasove drugima ili se govori drugačije od vršnjaka."
+                  }
+                }
+              ]
+            }] : [])
+          ])
         }}
       />
       
@@ -372,6 +452,19 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
           Nazad na blog
         </Link>
       </nav>
+
+      {/* Breadcrumbs */}
+      <div className="bg-gray-50 py-4">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <nav className="flex text-sm text-gray-500">
+            <Link href="/" className="hover:text-primary transition">Početna</Link>
+            <span className="mx-2">/</span>
+            <Link href="/blog" className="hover:text-primary transition">Blog</Link>
+            <span className="mx-2">/</span>
+            <span className="text-gray-700 font-medium">{post.title}</span>
+          </nav>
+        </div>
+      </div>
 
       {/* Blog Post */}
       <article className="py-16">
@@ -394,7 +487,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
           {/* Post Header */}
           <header className="mb-12">
-            <div className="flex items-center gap-6 text-gray-500 mb-4">
+            <div className="flex items-center gap-6 text-gray-500 mb-4 flex-wrap">
               <div className="flex items-center gap-2">
                 <FaCalendar />
                 <span>{post.date}</span>
@@ -406,14 +499,43 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               <div className="text-sm">
                 {post.readTime}
               </div>
+              <div className="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+                {post.category}
+              </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">
               {post.title}
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-xl text-gray-600 leading-relaxed mb-6">
               {post.intro}
             </p>
+            
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mb-8">
+              {post.tags.map((tag, index) => (
+                <span key={index} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-gray-200 transition">
+                  #{tag}
+                </span>
+              ))}
+            </div>
           </header>
+
+          {/* Table of Contents */}
+          <div className="bg-gray-50 p-6 rounded-lg mb-12">
+            <h2 className="text-xl font-bold text-primary mb-4">📚 Sadržaj članka</h2>
+            <nav className="space-y-2">
+              {post.content.map((section, index) => (
+                <a 
+                  key={index}
+                  href={`#section-${index}`}
+                  className="block text-gray-700 hover:text-primary transition py-1 border-l-2 border-transparent hover:border-primary pl-3"
+                >
+                  <span className="mr-2">{section.emoji}</span>
+                  {section.title}
+                </a>
+              ))}
+            </nav>
+          </div>
 
           {/* Post Content */}
           <div className="prose prose-lg max-w-none">
@@ -421,7 +543,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
             {post.content.map((section, index) => (
               <div key={index}>
-                <section className="mb-12">
+                <section className="mb-12" id={`section-${index}`}>
                   <h2 className="text-2xl font-bold text-primary mb-6 flex items-center">
                     <span className="mr-3">{section.emoji}</span>
                     {section.title}
@@ -447,6 +569,40 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
             ))}
 
             <div className="border-t-4 border-accent mt-12"></div>
+          </div>
+
+          {/* Social Sharing */}
+          <SocialShare 
+            url={`https://logonova.rs/blog/${params.slug}`}
+            title={post.title}
+          />
+
+          {/* Related Posts */}
+          <div className="border-t border-gray-200 pt-8 mt-12">
+            <h3 className="text-2xl font-bold text-primary mb-6">📚 Preporučeni članci</h3>
+            <div className="grid md:grid-cols-2 gap-6">
+              {Object.entries(blogPosts)
+                .filter(([slug]) => slug !== params.slug)
+                .map(([slug, relatedPost]) => (
+                  <Link key={slug} href={`/blog/${slug}`} className="block group">
+                    <div className="bg-white border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                      <div className="p-6">
+                        <div className="text-sm text-gray-500 mb-2">{relatedPost.category}</div>
+                        <h4 className="font-bold text-lg text-primary group-hover:text-accent transition mb-2 line-clamp-2">
+                          {relatedPost.title}
+                        </h4>
+                        <p className="text-gray-600 text-sm mb-3 line-clamp-3">
+                          {relatedPost.intro}
+                        </p>
+                        <div className="flex items-center justify-between text-xs text-gray-500">
+                          <span>{relatedPost.author}</span>
+                          <span>{relatedPost.readTime}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+            </div>
           </div>
 
           {/* Call to Action */}
