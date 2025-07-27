@@ -4,13 +4,15 @@ import { FaArrowLeft, FaGraduationCap, FaCertificate, FaHeart, FaUsers } from 'r
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Naš tim - Ana Novaković & Marijana Mrmošanin',
-  description: 'Upoznajte naš stručni tim privatnog logopedskog kabineta LOGONOVA. Ana Novaković, privatni logoped i Marijana Mrmošanin, privatni defektolog-logoped, reedukator psihomotorike. Privatna praksa sa individualnim pristupom.',
-  keywords: 'privatni logoped Ana Novaković, privatni defektolog Marijana Mrmošanin, privatni master defektologije logoped Kragujevac, privatna psihomotorika, privatni defektolog logoped, privatni stručni tim logopedija, privatni reedukator psihomotorike, privatni tim logoped Kragujevac',
+  title: 'Naš tim - Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević',
+  description: 'Upoznajte naš stručni tim privatnog logopedskog kabineta LOGONOVA. Ana Novaković master defektologije logoped, Marijana Mrmošanin defektolog-logoped reedukator psihomotorike, Gorjana Milosavljević specijalista defektolog-oligofrenolog. Privatna praksa sa individualnim pristupom.',
+  keywords: 'privatni logoped Ana Novaković, privatni defektolog Marijana Mrmošanin, Gorjana Milosavljević defektolog oligofrenolog Kragujevac, privatni master defektologije logoped Kragujevac, privatna psihomotorika, privatni defektolog logoped, privatni stručni tim logopedija, privatni reedukator psihomotorike, privatni tim logoped Kragujevac, specijalista defektolog Kragujevac, oligofrenolog Kragujevac, rana intervencija detinjstvo Kragujevac, Montessori metod Kragujevac, inkluzivno obrazovanje, senzorna integracija deca',
   openGraph: {
-    title: 'Naš tim - Ana Novaković & Marijana Mrmošanin | LOGONOVA',
-    description: 'Upoznajte naš stručni tim privatnog logopedskog kabineta LOGONOVA. Ana Novaković, privatni logoped i Marijana Mrmošanin, privatni defektolog-logoped.',
+    title: 'Naš tim - Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević | LOGONOVA',
+    description: 'Upoznajte naš stručni tim privatnog logopedskog kabineta LOGONOVA. Ana Novaković master defektologije logoped, Marijana Mrmošanin defektolog-logoped, Gorjana Milosavljević specijalista defektolog-oligofrenolog.',
     type: 'website',
+    locale: 'sr_RS',
+    siteName: 'LOGONOVA',
     url: 'https://logonova.rs/nas-tim',
   },
   alternates: {
@@ -25,7 +27,7 @@ export default function NasTim() {
       <nav className="flex flex-wrap justify-between items-center px-4 md:px-6 py-4 bg-white shadow-sm sticky top-0 z-100">
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-2xl md:text-3xl font-bold text-primary">LOGONOVA</span>
-          <span className="ml-2 text-accent font-bold text-xl md:text-2xl">&#9829;</span>
+          <span className="ml-2 text-accent font-bold text-3xl md:text-3xl">&#9829;</span>
         </Link>
         <Link href="/" className="flex items-center text-primary hover:text-accent transition">
           <FaArrowLeft className="mr-2" />
@@ -54,7 +56,7 @@ export default function NasTim() {
               <div className="md:w-1/3 bg-gray-100 flex items-center justify-center p-8">
                 <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg">
                   <Image
-                    src="/ana-novakovic.jpg"
+                    src="/ana-novakovic.webp"
                     alt="Ana Novaković - Master Logoped"
                     width={256}
                     height={256}
@@ -82,6 +84,9 @@ export default function NasTim() {
                  <p className="text-gray-700 text-lg mb-6 leading-relaxed">
                      2018.god. Osniva logopedski kabinet LOGONOVA u Kragujevcu.
                  </p>
+                <p className="text-gray-700 text-lg mb-6 leading-relaxed">
+                    Udata je i majka dvoje dece. Iskustvo roditeljstva dodatno obogaćuje njen profesionalni pristup i razumevanje potreba kako dece tako i njihovih roditelja.
+                </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex items-start">
@@ -122,7 +127,7 @@ export default function NasTim() {
               <div className="md:w-1/3 bg-gray-100 flex items-center justify-center p-8">
                 <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg">
                   <Image
-                    src="/marijana-mrmosanin.jpg"
+                    src="/marijana-mrmosanin.webp"
                     alt="Marijana Mrmošanin privatni defektolog logoped Kragujevac"
                     width={256}
                     height={256}
@@ -186,9 +191,104 @@ export default function NasTim() {
                 </div>
               </div>
             </div>
+                    </div>
+
+          {/* Gorjana Milosavljević Profile */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-12">
+            <div className="md:flex">
+              {/* Photo */}
+              <div className="md:w-1/3 bg-gray-100 flex items-center justify-center p-8">
+                <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg">
+                  <Image
+                    src="/gorjana-milosavljevic.webp"
+                    alt="Gorjana Milosavljević specijalista defektolog oligofrenolog Kragujevac, rana intervencija detinjstvo, Montessori metod, inkluzivno obrazovanje"
+                    width={256}
+                    height={256}
+                    className="w-full h-full object-cover object-center"
+                    style={{ objectPosition: 'center 15%', transform: 'scale(1.2)' }}
+                  />
+                </div>
+              </div>
+              
+              {/* Info */}
+              <div className="md:w-2/3 p-8">
+                <h2 className="text-3xl font-bold text-primary mb-2">Gorjana Milosavljević</h2>
+                <h3 className="text-xl text-accent font-semibold mb-4">Specijalista defektolog-oligofrenolog</h3>
+                
+                <div className="text-gray-700 text-lg mb-6 leading-relaxed space-y-3">
+                  <p><strong>RADNA BIOGRAFIJA</strong></p>
+                  <p>Gorjana Milosavljević - specijalista defektolog-oligofrenolog</p>
+                  <p>-diplomirala u aprilu 2009.god na FASPER-u</p>
+                                     <p>-Završene Specijalističke akademske studije rane intervencije u detinjstvu (jun 2022.) na fakultetu medicinskih nauka Univerziteta u Novom Sadu, odsek za specijalnu edukaciju i rehabilitaciju, gde je stekla zvanje specijalista defektolog</p>
+                  <p>-od januara 2010.do decembra 2018.god zaposlena u Školi za osnovno i srednje obrazovanje „Milan Petrović" u Novom Sadu</p>
+                  <p>-od decembra 2018.pa do sada zaposlena u Školi za osnovno i srednje obrazovanje „Vukašin Marković" u Kragujevcu</p>
+                  <p>-od februara 2020.rad u privatnom logopedskom kabinetu</p>
+                  
+                  <p><strong>Takođe poseduje:</strong></p>
+                                     <p>-Potvrdu o izjednačenoj diplomi sa master drugog stepena studija (izdatu na FASPER-u 10.12.2013.god)</p>
+                  <p>-Položen državni ispit i licencu za rad u prosveti (izdatu 05.06.2014.godine,Pokrajinski sekretarijat za obrazovanje AP Vojvodine, N. Sad)</p>
+                                     <p>-Edukaciju u trajanju od godinu dana iz opšte i specifične reedukacije psihomotorike (2013./14., Palmotićeva, Beograd), stekla zvanje reedukator psihomotorike</p>
+                  <p>-iskustva sa decom iz spektra autizma (pervazivnih razvojnih poremećaja) i višestrukih smetnji</p>
+                  
+                  <p><strong>Od dodatnih edukacija izdvojila bi:</strong></p>
+                  <p>-Dve sa Instituta za Mentalno zdravlje (Palmotićeva,Beograd), u trajanju od po godinu dana (dva semestra):</p>
+                  <p>1.Mentalna higijena razvojnog doba –zaštita i unapređenje mentalnog zdravlja dece i mladih i mentalni poremećaji i poremećaji ponašanja u detinjstvu i mladosti (2010./2011.Palmotićeva,Beograd)</p>
+                  <p>2.Opšta reedukacija psihomotrike i relaksacija, i specifična reedukacija psihomotrike sa opštom defektološkom dijagnostikom (2013./2014.,Palmotićeva,Beograd)</p>
+                  
+                  <p>-Akreditovanih seminara poseduje preko 20, od kojih bi izdvojila sledeće, u trajanju po 2 dana:</p>
+                  <p>1.Pedagški metod Marije Montesori i njegova primena u vaspitno-obrazovnom radu (novembar 2010.,N. Sad)</p>
+                  <p>2.Inkluzivno obrazovanje-planiranje i izrada IOP-a (novembar 2011., N. Sad)</p>
+                                     <p>3.MENSA NTC sistem učenja –razvoj kreativnog i funkcionalnog razmišljanja i efikasnog učenja (decembar 2010.i februar 2011.,N. Sad)</p>
+                  <p>4.Podsticanje senzorne integracije kod dece (novembar 2013.,N.Sad)</p>
+                  
+                  <p>-U trajanju po jedan dan,takođe akreditovani programi:</p>
+                  <p>1.Vizuelne strategije za razvoj socijalizacije i komunikacije kod dece iz spektra autizma (decembar 2012.,N.Sad)</p>
+                  <p>2.Primena aplikacija kod učenika sa komunikacijskim teškoćama i problemima u učenju (jun 2019.,Kragujevac)</p>
+                  <p>3.Augmentativna i alternativna komunikacija-izrada sredstava i primena u praksi(oktobar 2020.,Kragujevac)</p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="flex items-start">
+                    <FaCertificate className="text-accent text-2xl mr-4 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-primary mb-1">Specijalizacija</h4>
+                      <p className="text-gray-700">Specijalista defektolog-oligofrenolog</p>
+                      <p className="text-gray-600 text-sm">Rana intervencija u detinjstvu</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <FaUsers className="text-accent text-2xl mr-4 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-primary mb-1">Iskustvo</h4>
+                      <p className="text-gray-700">14+ godina rada u obrazovanju</p>
+                      <p className="text-gray-600 text-sm">Škole specijalne edukacije + privatna praksa</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <FaCertificate className="text-accent text-2xl mr-4 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-primary mb-1">Licenciran stručnjak</h4>
+                      <p className="text-gray-700">Državni ispit (2014)</p>
+                      <p className="text-gray-600 text-sm">Pokrajinski sekretarijat za obrazovanje AP Vojvodine</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <FaCertificate className="text-accent text-2xl mr-4 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-primary mb-1">Dodatne edukacije</h4>
+                      <p className="text-gray-700">20+ akreditovanih seminara</p>
+                      <p className="text-gray-600 text-sm">Montessori, inkluzivno obrazovanje, senzorna integracija</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-
+ 
 
           {/* Philosophy */}
           <div className="bg-primary text-white rounded-lg p-8 mb-12">

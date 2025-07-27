@@ -11,6 +11,8 @@ export const metadata: Metadata = {
     title: 'Blog - Saveti za govorno-jezički razvoj dece | LOGONOVA',
     description: 'Korisni saveti i informacije o govorno-jezičkom razvoju dece. Stručni tekstovi logopeda iz Kragujevca.',
     type: 'website',
+    locale: 'sr_RS',
+    siteName: 'LOGONOVA',
     url: 'https://logonova.rs/blog',
   },
   alternates: {
@@ -20,6 +22,15 @@ export const metadata: Metadata = {
 
 export default function Blog() {
   const blogPosts = [
+    {
+      id: 'razvoj-govora-i-glasovi',
+      title: 'Razvoj govora i pravilno izgovaranje glasova kod dece',
+      excerpt: 'Za posetu logopedu nikada nije prerano, jer je govor složen proces koji se razvija od rođenja. Sveobuhvatan vodič kroz uzroke dislalije, razvojne norme i faktore koji utiču na uspešnost terapije...',
+      date: '15. decembar 2024',
+      author: 'Ana Novaković',
+      readTime: '12 min čitanja',
+      image: '/blog-post-razvoj-govora.webp'
+    },
     {
       id: 'priprema-deteta-za-prvi-razred',
       title: 'Šta bi bilo poželjno da dete zna pre polaska u prvi razred?',
@@ -37,7 +48,7 @@ export default function Blog() {
       <nav className="flex flex-wrap justify-between items-center px-4 md:px-6 py-4 bg-white shadow-sm sticky top-0 z-100">
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-2xl md:text-3xl font-bold text-primary">LOGONOVA</span>
-          <span className="ml-2 text-accent font-bold text-xl md:text-2xl">&#9829;</span>
+          <span className="ml-2 text-accent font-bold text-3xl md:text-3xl">&#9829;</span>
         </Link>
         <Link href="/" className="flex items-center text-primary hover:text-accent transition">
           <FaArrowLeft className="mr-2" />
@@ -69,7 +80,7 @@ export default function Blog() {
                       className="object-contain hover:scale-105 transition-transform duration-300"
                       loading="lazy"
                       quality={80}
-                      style={{ backgroundColor: '#f7edd9' }}
+                      style={{ backgroundColor: post.id === 'razvoj-govora-i-glasovi' ? '#fbf2e7' : '#f7edd9' }}
                     />
                   </div>
                 )}

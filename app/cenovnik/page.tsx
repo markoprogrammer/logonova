@@ -10,6 +10,8 @@ export const metadata: Metadata = {
     title: 'Cenovnik - Privatni logoped i defektolog Kragujevac | LOGONOVA',
     description: 'Cenovnik privatnog logopedskog kabineta u Kragujevcu. Transparentne cene za privatnu logopedsku i defektološku uslugu.',
     type: 'website',
+    locale: 'sr_RS',
+    siteName: 'LOGONOVA',
     url: 'https://logonova.rs/cenovnik',
   },
   alternates: {
@@ -24,7 +26,7 @@ export default function Cenovnik() {
       <nav className="flex flex-wrap justify-between items-center px-4 md:px-6 py-4 bg-white shadow-sm sticky top-0 z-100">
         <Link href="/" className="flex items-center space-x-2">
           <span className="text-2xl md:text-3xl font-bold text-primary">LOGONOVA</span>
-          <span className="ml-2 text-accent font-bold text-xl md:text-2xl">&#9829;</span>
+          <span className="ml-2 text-accent font-bold text-3xl md:text-3xl">&#9829;</span>
         </Link>
         <Link href="/" className="flex items-center text-primary hover:text-accent transition">
           <FaArrowLeft className="mr-2" />

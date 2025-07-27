@@ -29,6 +29,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog/razvoj-govora-i-glasovi`,
+      lastModified: new Date('2025-07-27'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/blog/priprema-deteta-za-prvi-razred`,
       lastModified: new Date('2025-07-02'),
       changeFrequency: 'monthly',
