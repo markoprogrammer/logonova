@@ -205,7 +205,7 @@ export default function NasTim() {
                     width={256}
                     height={256}
                     className="w-full h-full object-cover object-center"
-                    style={{ objectPosition: 'center 15%', transform: 'scale(1.2)' }}
+                    style={{ objectPosition: 'center top' }}
                   />
                 </div>
               </div>

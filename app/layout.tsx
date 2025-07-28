@@ -62,7 +62,6 @@ export default function RootLayout({
     <html lang="sr">
       <head>
         {/* Critical resource preloading */}
-        <link rel="preload" href="/IMG_8035.webp" as="image" type="image/webp" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="" />
         
