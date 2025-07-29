@@ -65,13 +65,13 @@ const blogPosts = {
           'Važno je poznavati razvojne norme jer je to bitno kod utvrđivanja odstupanja.',
           '',
           '🎯 UZRAST 3-3,5 GODINA:',
-          '• A, E, I, O, U, P, B, M, N, K, G, T, D, V, F, H i J',
+          '• A, E, I, O, U, P, B, M, N, K, G, T, D, V, F, H, J i L',
           '',
           '🎯 UZRAST 4-4,5 GODINA:',
           '• S, Z, C, LJ, NJ i R',
           '',
           '🎯 UZRAST 5-5,5 GODINA:',
-          '• Š, Ž, DZ, Č, Đ i Ć',
+          '• Š, Ž, Dž, Č, Đ i Ć',
           '',
           '⚠️ VAŽNO: Na uzrastu od 5,5 godina dete mora da izgovara pravilno sve glasove maternjeg jezika!'
         ],
@@ -424,7 +424,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                   "name": "Kada su svi glasovi pravilno usvojeni?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Na uzrastu od 5,5 godina dete mora da izgovara pravilno sve glasove maternjeg jezika. Glasovi se usvajaju postepeno: A,E,I,O,U,P,B,M,N,K,G,T,D,V,F,H,J do 3,5 godina; S,Z,C,LJ,NJ,R do 4,5 godina; Š,Ž,DZ,Č,Đ,Ć do 5,5 godina."
+                    "text": "Na uzrastu od 5,5 godina dete mora da izgovara pravilno sve glasove maternjeg jezika. Glasovi se usvajaju postepeno: A,E,I,O,U,P,B,M,N,K,G,T,D,V,F,H,J do 3,5 godina; S,Z,C,LJ,NJ,R do 4,5 godina; Š,Ž,Dž,Č,Đ,Ć do 5,5 godina."
                   }
                 },
                 {
