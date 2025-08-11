@@ -4,12 +4,12 @@ import { FaArrowLeft, FaGraduationCap, FaCertificate, FaHeart, FaUsers } from 'r
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Naš tim - Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević',
-  description: 'Upoznajte naš stručni tim privatnog logopedskog kabineta LOGONOVA. Ana Novaković master defektologije logoped, Marijana Mrmošanin defektolog-logoped reedukator psihomotorike, Gorjana Milosavljević specijalista defektolog-oligofrenolog. Privatna praksa sa individualnim pristupom.',
-  keywords: 'privatni logoped Ana Novaković, privatni defektolog Marijana Mrmošanin, Gorjana Milosavljević defektolog oligofrenolog Kragujevac, privatni master defektologije logoped Kragujevac, privatna psihomotorika, privatni defektolog logoped, privatni stručni tim logopedija, privatni reedukator psihomotorike, privatni tim logoped Kragujevac, specijalista defektolog Kragujevac, oligofrenolog Kragujevac, rana intervencija detinjstvo Kragujevac, Montessori metod Kragujevac, inkluzivno obrazovanje, senzorna integracija deca',
+  title: 'Naš tim - Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević, Ljubica Milosavljević',
+  description: 'Upoznajte naš stručni tim privatnog logopedskog kabineta LOGONOVA. Ana Novaković master defektologije logoped, Marijana Mrmošanin defektolog-logoped reedukator psihomotorike, Gorjana Milosavljević specijalista defektolog-oligofrenolog, Ljubica Milosavljević psiholog. Privatna praksa sa individualnim pristupom.',
+  keywords: 'privatni logoped Ana Novaković, privatni defektolog Marijana Mrmošanin, Gorjana Milosavljević defektolog oligofrenolog Kragujevac, Ljubica Milosavljević psiholog Kragujevac, privatni master defektologije logoped Kragujevac, privatna psihomotorika, privatni defektolog logoped, privatni stručni tim logopedija, privatni reedukator psihomotorike, privatni tim logoped Kragujevac, specijalista defektolog Kragujevac, oligofrenolog Kragujevac, rana intervencija detinjstvo Kragujevac, Montessori metod Kragujevac, inkluzivno obrazovanje, senzorna integracija deca, psiholog Kragujevac',
   openGraph: {
-    title: 'Naš tim - Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević | LOGONOVA',
-    description: 'Upoznajte naš stručni tim privatnog logopedskog kabineta LOGONOVA. Ana Novaković master defektologije logoped, Marijana Mrmošanin defektolog-logoped, Gorjana Milosavljević specijalista defektolog-oligofrenolog.',
+    title: 'Naš tim - Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević, Ljubica Milosavljević | LOGONOVA',
+    description: 'Upoznajte naš stručni tim privatnog logopedskog kabineta LOGONOVA. Ana Novaković master defektologije logoped, Marijana Mrmošanin defektolog-logoped, Gorjana Milosavljević specijalista defektolog-oligofrenolog, Ljubica Milosavljević psiholog.',
     type: 'website',
     locale: 'sr_RS',
     siteName: 'LOGONOVA',
@@ -40,7 +40,7 @@ export default function NasTim() {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4">Naš tim</h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-4">
-            Upoznajte stručni tim koji stoji iza kvalitetne logopedske i defektološke usluge u Kragujevcu
+            Upoznajte stručni tim koji stoji iza kvalitetne logopedske, defektološke i psihološke usluge u Kragujevcu
           </p>
         </div>
       </section>
@@ -288,7 +288,117 @@ export default function NasTim() {
             </div>
           </div>
 
- 
+          {/* Ljubica Milosavljević Profile */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-12">
+            <div className="md:flex">
+              {/* Photo */}
+              <div className="md:w-1/3 bg-gray-100 flex items-center justify-center p-8">
+                <div className="w-64 h-64 rounded-full overflow-hidden shadow-lg">
+                  <Image
+                    src="/ljubica.webp"
+                    alt="Ljubica Milosavljević psiholog Kragujevac"
+                    width={256}
+                    height={256}
+                    className="w-full h-full object-cover object-center"
+                    style={{ objectPosition: 'center top' }}
+                    quality={85}
+                  />
+                </div>
+              </div>
+              
+              {/* Info */}
+              <div className="md:w-2/3 p-8">
+                <h2 className="text-3xl font-bold text-primary mb-2">Ljubica Milosavljević</h2>
+                <h3 className="text-xl text-accent font-semibold mb-4">Dipl. psiholog, porodični psihoterapeut</h3>
+                
+                <div className="text-gray-700 text-lg mb-6 leading-relaxed space-y-3">
+                  <p>
+                    Diplomirala je 2011. godine na Filozofskom fakultetu, odeljenje za Psihologiju, u Beogradu, nakon čega je stekla zvanje dipl. psihologa.
+                  </p>
+                  <p>
+                    Na odeljenju za Psihologiju, u Kragujevcu je 2 godine kao stručni saradnik držala studentima vežbe na predmetima Razvojna psihopatologija i Psihologija porodice.
+                  </p>
+                  <p>
+                    Od 2014. godine radila je kao asistent deteta sa autizmom i kao nastavnik psihologije u muzičkoj školi "Dr Miloje Milojević" i Drugoj tehničkoj školi u Kragujevcu. Godine 2016. otišla je za Ameriku na praksu u Anderson centar za autizam i tamo je stekla sertifikate i znanja potrebna za RBT (registrovanog bihejvioralnog tehničara).
+                  </p>
+                  <p>
+                    Po povratku iz Amerike odlučila je da započne svoju privatnu praksu. U oktobru 2017. godine otvorila je edukativni centar koji je namenjen deci kojoj je potrebna podrška u razvoju, učenju, ponašanju i emocionalnom reagovanju.
+                  </p>
+                  <p>
+                    2018. godine upisala je četvorogodišnju edukaciju iz Sistemske porodične terapije na Institutu za mentalno zdravlje u Beogradu i stekla sertifikat porodičnog terapeuta, čime je upotpunila postojeća znanja, poboljšala kvalitet postojećih usluga i proširila svoje područje rada i na odrasle.
+                  </p>
+                  <p>
+                    Osim toga, aktivno učestvuje na skupovima vezanim za struku. U organizaciji Centra za primenjenu psihologiju 2020. godine završila je uvodni kurs: "Dijagnostika neurorazvojnih problema kod dece" čiji je osnovni cilj unapređenje kompetencija stručnjaka za rano prepoznavanje, dijagnostiku, tretman i praćenje dece sa neurorazvojnim problemima.
+                  </p>
+                  <p>
+                    Takođe od 2017. godine aktivno učestvuje u programima za podršku ženama, žrtvama porodičnog nasilja.
+                  </p>
+                </div>
+
+                {/* Call to Action for Ljubica's Website */}
+                <div className="mt-8 mb-6 text-center">
+                  <div className="inline-block bg-gradient-to-r from-accent/10 to-primary/10 rounded-2xl p-6 border border-accent/20">
+                    <p className="text-gray-600 mb-4 text-sm">Saznajte više o mojim uslugama</p>
+                    <a 
+                      href="https://www.psihologijam.rs/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-flex items-center bg-gradient-to-r from-accent to-yellow-300 text-primary px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 transform"
+                    >
+                      <span className="mr-2">🌐</span>
+                      Saznajte više
+                      <svg className="ml-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Obrazovanje i sertifikati */}
+                <div className="mt-8 mb-6">
+                  <h4 className="text-2xl font-bold text-primary mb-6 text-center">Obrazovanje i sertifikati</h4>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="flex items-start">
+                    <div className="w-1 bg-accent mr-4 mt-1 h-16 rounded-full"></div>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-1">Diplomski studije</h4>
+                      <p className="text-gray-700">Filozofski fakultet, Psihologija</p>
+                      <p className="text-gray-600 text-sm">Beograd, 2011</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="w-1 bg-accent mr-4 mt-1 h-16 rounded-full"></div>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-1">Sistemska porodična terapija</h4>
+                      <p className="text-gray-700">Institut za mentalno zdravlje</p>
+                      <p className="text-gray-600 text-sm">Beograd, 2018</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="w-1 bg-accent mr-4 mt-1 h-16 rounded-full"></div>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-1">RBT sertifikat</h4>
+                      <p className="text-gray-700">Anderson centar za autizam</p>
+                      <p className="text-gray-600 text-sm">Amerika, 2016</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="w-1 bg-accent mr-4 mt-1 h-16 rounded-full"></div>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-1">Dijagnostika neurorazvojnih problema</h4>
+                      <p className="text-gray-700">Centar za primenjenu psihologiju</p>
+                      <p className="text-gray-600 text-sm">2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Philosophy */}
           <div className="bg-primary text-white rounded-lg p-8 mb-12">

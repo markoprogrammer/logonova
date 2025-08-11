@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   openGraph: {
     title: 'Privatni logopedski kabinet LOGONOVA Kragujevac | Ana Novakovic - Master defektologije logoped',
-    description: 'Privatni logopedski kabinet LOGONOVA u Kragujevcu sa stručnim timom Ana Novaković, Marijana Mrmošanin i Gorjana Milosavljević. Profesionalna logopedska i defektološka usluga za decu.',
+    description: 'Privatni logopedski kabinet LOGONOVA u Kragujevcu sa stručnim timom Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević i Ljubica Milosavljević. Profesionalna logopedska, defektološka i psihološka usluga za decu i odrasle.',
     type: 'website',
     locale: 'sr_RS',
     siteName: 'LOGONOVA',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Privatni logopedski kabinet LOGONOVA Kragujevac',
-    description: 'Privatni logopedski kabinet za decu u Kragujevcu. Tim: Ana Novaković, Marijana Mrmošanin i Gorjana Milosavljević - privatni logoped i defektolog.',
+    description: 'Privatni logopedski kabinet za decu u Kragujevcu. Tim: Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević i Ljubica Milosavljević - privatni logoped, defektolog i psiholog.',
     images: ['/IMG_8035.webp'],
   },
   alternates: {
@@ -46,7 +46,7 @@ export default function Home() {
             "@type": "MedicalBusiness",
             "name": "Logopedski kabinet LOGONOVA Kragujevac",
             "image": "https://logonova.rs/IMG_8035.webp",
-            "description": "Profesionalna logopedska usluga u Kragujevcu. Individualni pristup, dijagnostika i terapija govorno-jezičkih poteškoća za decu.",
+            "description": "Profesionalna logopedska usluga u Kragujevcu. Individualni pristup, dijagnostika i terapija govorno-jezičkih poremećaja za decu.",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Andre Marinković 30",
@@ -79,7 +79,7 @@ export default function Home() {
               "@type": "City",
               "name": "Kragujevac"
             },
-            "medicalSpecialty": "Speech Therapy",
+            "medicalSpecialty": ["Speech Therapy", "Psychology", "Special Education"],
             "sameAs": [
               "https://www.facebook.com/logonova",
               "https://www.instagram.com/logonova",
@@ -224,7 +224,7 @@ export default function Home() {
                   "itemOffered": {
                     "@type": "Service", 
                     "name": "Individualni tretmani",
-                    "description": "Terapija govorno-jezičkih poteškoća"
+                    "description": "Terapija govorno-jezičkih poremećaja"
                   }
                 },
                 {
@@ -354,18 +354,29 @@ export default function Home() {
       <section id="usluge" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-10 text-center">Usluge</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-accent hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold mb-2 text-primary">Dijagnostika</h3>
-              <p className="text-secondary font-medium">Detaljna procena govorno-jezičkih sposobnosti</p>
+              <h3 className="text-xl font-semibold mb-2 text-primary">Logoped</h3>
+              <p className="text-secondary font-medium">Dijagnostika i terapija govorno-jezičkih poremećaja</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-accent hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold mb-2 text-primary">Terapija</h3>
-              <p className="text-secondary font-medium">Individualni tretmani za decu</p>
+              <h3 className="text-xl font-semibold mb-2 text-primary">Defektolog</h3>
+              <p className="text-secondary font-medium">Rana intervencija i razvoj kognitivnih sposobnosti</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-accent hover:shadow-lg transition">
-              <h3 className="text-xl font-semibold mb-2 text-primary">Savetovanje</h3>
-              <p className="text-secondary font-medium">Podrška i smernice za roditelje i porodicu</p>
+              <h3 className="text-xl font-semibold mb-2 text-primary">Psiholog</h3>
+              <p className="text-secondary font-medium mb-4">Psihološko savetovanje za decu i odrasle</p>
+              <a 
+                href="https://www.psihologijam.rs/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center bg-accent text-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-yellow-300 transition-colors"
+              >
+                Saznajte više
+                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
