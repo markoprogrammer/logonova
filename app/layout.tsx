@@ -80,7 +80,7 @@ export default function RootLayout({
         <meta name="geo.placename" content="Kragujevac" />
         <meta name="geo.position" content="44.0165;20.9202" />
         <meta name="ICBM" content="44.0165, 20.9202" />
-        <meta name="language" content="sr" />
+        <meta name="language" content="sr-RS" />
         <meta name="revisit-after" content="7 days" />
         <meta name="distribution" content="global" />
         <meta name="rating" content="general" />
