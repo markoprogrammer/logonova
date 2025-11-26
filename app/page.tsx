@@ -5,16 +5,29 @@ import MobileMenu from './components/MobileMenu'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  title: 'Privatni logopedski kabinet LOGONOVA Kragujevac | Ana Novakovic - Master defektologije logoped',
+  description: 'Privatni logopedski kabinet LOGONOVA u Kragujevcu. Ana Novaković master defektologije logoped sa stručnim timom. Profesionalna logopedska i defektološka usluga za decu - dijagnostika, terapija i savetovanje.',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'Privatni logopedski kabinet LOGONOVA Kragujevac | Ana Novakovic - Master defektologije logoped',
-    description: 'Privatni logopedski kabinet LOGONOVA u Kragujevcu sa stručnim timom Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević i Ljubica Milosavljević. Profesionalna logopedska, defektološka i psihološka usluga za decu i odrasle.',
+    description: 'Privatni logopedski kabinet LOGONOVA u Kragujevcu. Ana Novaković master defektologije logoped sa stručnim timom. Profesionalna logopedska i defektološka usluga za decu.',
     type: 'website',
     locale: 'sr_RS',
     siteName: 'LOGONOVA',
     url: 'https://logonova.rs',
     images: [
       {
-        url: '/IMG_8035.webp',
+        url: 'https://logonova.rs/IMG_8035.webp',
         width: 1200,
         height: 630,
         alt: 'Logopedski kabinet LOGONOVA Kragujevac - Profesionalna logopedska usluga',
@@ -24,8 +37,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Privatni logopedski kabinet LOGONOVA Kragujevac',
-    description: 'Privatni logopedski kabinet za decu u Kragujevcu. Tim: Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević i Ljubica Milosavljević - privatni logoped, defektolog i psiholog.',
-    images: ['/IMG_8035.webp'],
+    description: 'Privatni logopedski kabinet za decu u Kragujevcu. Ana Novaković master defektologije logoped sa stručnim timom - privatni logoped i defektolog.',
+    images: ['https://logonova.rs/IMG_8035.webp'],
   },
   alternates: {
     canonical: 'https://logonova.rs',
@@ -165,7 +178,7 @@ export default function Home() {
             "url": "https://logonova.rs",
             "logo": "https://logonova.rs/favicon.png",
             "image": "https://logonova.rs/IMG_8035.webp",
-            "description": "Privatni logopedski kabinet u Kragujevcu. Ana Novaković master defektologije logoped, Marijana Mrmošanin master defektologije i logoped, Gorjana Milosavljević specijalista defektolog-oligofrenolog.",
+            "description": "Privatni logopedski kabinet u Kragujevcu. Ana Novaković master defektologije logoped sa stručnim timom.",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Andre Marinković 30",
@@ -205,7 +218,7 @@ export default function Home() {
                 "name": "Gorjana Milosavljević",
                 "jobTitle": "Specijalista defektolog-oligofrenolog",
                 "description": "Specijalista za ranu intervenciju u detinjstvu sa 14+ godina iskustva u obrazovanju, 20+ dodatnih edukacija uključujući Montessori metod, inkluzivno obrazovanje i senzornu integraciju"
-              }
+              },
             ],
             "hasOfferCatalog": {
               "@type": "OfferCatalog",

@@ -6,6 +6,17 @@ export const metadata: Metadata = {
   title: 'Cenovnik - Privatni logoped i defektolog Kragujevac',
   description: 'Cenovnik privatnog logopedskog kabineta LOGONOVA u Kragujevcu. Privatni logoped, defektolog, pregledi, tretmani i savetovanje. Transparentne cene za privatnu logopedsku i defektološku uslugu.',
   keywords: 'privatni logoped cenovnik Kragujevac, privatni defektolog cena, privatna logopedska usluga cena, privatni tretman govora cena, privatna logopedska terapija cena, privatno savetovanje logoped, privatni psiholog cena Kragujevac, privatna dijagnostika govora',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'Cenovnik - Privatni logoped i defektolog Kragujevac | LOGONOVA',
     description: 'Cenovnik privatnog logopedskog kabineta u Kragujevcu. Transparentne cene za privatnu logopedsku i defektološku uslugu.',
@@ -13,6 +24,20 @@ export const metadata: Metadata = {
     locale: 'sr_RS',
     siteName: 'LOGONOVA',
     url: 'https://logonova.rs/cenovnik',
+    images: [
+      {
+        url: 'https://logonova.rs/IMG_8035.webp',
+        width: 1200,
+        height: 630,
+        alt: 'LOGONOVA cenovnik - Privatni logoped i defektolog Kragujevac',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cenovnik - LOGONOVA Kragujevac',
+    description: 'Cenovnik privatnog logopedskog kabineta u Kragujevcu.',
+    images: ['https://logonova.rs/IMG_8035.webp'],
   },
   alternates: {
     canonical: 'https://logonova.rs/cenovnik',

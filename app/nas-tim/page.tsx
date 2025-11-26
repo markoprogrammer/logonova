@@ -4,16 +4,41 @@ import { FaArrowLeft, FaGraduationCap, FaCertificate, FaHeart, FaUsers } from 'r
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Naš tim - Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević, Ljubica Milosavljević',
-  description: 'Upoznajte naš stručni tim privatnog logopedskog kabineta LOGONOVA. Ana Novaković master defektologije logoped, Marijana Mrmošanin defektolog-logoped reedukator psihomotorike, Gorjana Milosavljević specijalista defektolog-oligofrenolog, Ljubica Milosavljević psiholog. Privatna praksa sa individualnim pristupom.',
-  keywords: 'privatni logoped Ana Novaković, privatni defektolog Marijana Mrmošanin, Gorjana Milosavljević defektolog oligofrenolog Kragujevac, Ljubica Milosavljević psiholog Kragujevac, privatni master defektologije logoped Kragujevac, privatna psihomotorika, privatni defektolog logoped, privatni stručni tim logopedija, privatni reedukator psihomotorike, privatni tim logoped Kragujevac, specijalista defektolog Kragujevac, oligofrenolog Kragujevac, rana intervencija detinjstvo Kragujevac, Montessori metod Kragujevac, inkluzivno obrazovanje, senzorna integracija deca, psiholog Kragujevac',
+  title: 'Naš tim - Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević',
+  description: 'Upoznajte naš stručni tim privatnog logopedskog kabineta LOGONOVA. Ana Novaković master defektologije logoped, Marijana Mrmošanin defektolog-logoped reedukator psihomotorike, Gorjana Milosavljević specijalista defektolog-oligofrenolog. Privatna praksa sa individualnim pristupom.',
+  keywords: 'privatni logoped Ana Novaković, privatni defektolog Marijana Mrmošanin, Gorjana Milosavljević defektolog oligofrenolog Kragujevac, privatni master defektologije logoped Kragujevac, privatna psihomotorika, privatni defektolog logoped, privatni stručni tim logopedija, privatni reedukator psihomotorike, privatni tim logoped Kragujevac, specijalista defektolog Kragujevac, oligofrenolog Kragujevac, rana intervencija detinjstvo Kragujevac, Montessori metod Kragujevac, inkluzivno obrazovanje, senzorna integracija deca',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
-    title: 'Naš tim - Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević, Ljubica Milosavljević | LOGONOVA',
-    description: 'Upoznajte naš stručni tim privatnog logopedskog kabineta LOGONOVA. Ana Novaković master defektologije logoped, Marijana Mrmošanin defektolog-logoped, Gorjana Milosavljević specijalista defektolog-oligofrenolog, Ljubica Milosavljević psiholog.',
+    title: 'Naš tim - Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević | LOGONOVA',
+    description: 'Upoznajte naš stručni tim privatnog logopedskog kabineta LOGONOVA. Ana Novaković master defektologije logoped, Marijana Mrmošanin defektolog-logoped, Gorjana Milosavljević specijalista defektolog-oligofrenolog.',
     type: 'website',
     locale: 'sr_RS',
     siteName: 'LOGONOVA',
     url: 'https://logonova.rs/nas-tim',
+    images: [
+      {
+        url: 'https://logonova.rs/IMG_8035.webp',
+        width: 1200,
+        height: 630,
+        alt: 'LOGONOVA tim - Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Naš tim - LOGONOVA Kragujevac',
+    description: 'Upoznajte naš stručni tim privatnog logopedskog kabineta LOGONOVA.',
+    images: ['https://logonova.rs/IMG_8035.webp'],
   },
   alternates: {
     canonical: 'https://logonova.rs/nas-tim',

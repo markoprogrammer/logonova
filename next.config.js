@@ -4,6 +4,11 @@ const nextConfig = {
   
   // SEO optimizations
   compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
+  
+  // Enable static page generation for better SEO
+  output: 'standalone',
   
   // Image optimization
   images: {

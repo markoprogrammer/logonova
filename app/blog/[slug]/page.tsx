@@ -283,6 +283,17 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       ? 'razvoj govora, dislalija, razvojne norme, logoped Kragujevac, izgovor glasova, govorna terapija, funkcionalni uzroci, organski uzroci, supstitucija, omisija, distorzija, Ana Novaković'
       : 'priprema za prvi razred, govorno-jezički razvoj, logoped Kragujevac, školska zrelost, fonološka svesnost, grafomotorika, matematičke veštine, koncentracija, prostorni odnosi',
     authors: [{ name: post.author }],
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
     openGraph: {
       title: post.title,
       description: post.intro,
@@ -294,10 +305,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       url: `https://logonova.rs/blog/${params.slug}`,
       images: [
         {
-          url: params.slug === 'razvoj-govora-i-glasovi' ? '/blog-post-razvoj-govora.webp' : '/blog-priprema-za-prvi-razred.webp',
+          url: params.slug === 'razvoj-govora-i-glasovi' ? 'https://logonova.rs/blog-post-razvoj-govora.webp' : 'https://logonova.rs/blog-priprema-za-prvi-razred.webp',
           width: 1200,
           height: 630,
-                      alt: params.slug === 'razvoj-govora-i-glasovi' 
+          alt: params.slug === 'razvoj-govora-i-glasovi' 
               ? 'Razvoj govora i pravilno izgovaranje glasova kod dece - blog post ilustracija'
               : 'Šta bi bilo poželjno da dete zna pre polaska u prvi razred - ilustracija sa decom i školom',
         },
@@ -307,7 +318,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       card: 'summary_large_image',
       title: post.title,
       description: post.intro,
-      images: [params.slug === 'razvoj-govora-i-glasovi' ? '/blog-post-razvoj-govora.webp' : '/blog-priprema-za-prvi-razred.webp'],
+      images: [params.slug === 'razvoj-govora-i-glasovi' ? 'https://logonova.rs/blog-post-razvoj-govora.webp' : 'https://logonova.rs/blog-priprema-za-prvi-razred.webp'],
     },
     alternates: {
       canonical: `https://logonova.rs/blog/${params.slug}`,

@@ -8,6 +8,17 @@ export const metadata: Metadata = {
   title: 'Blog - Saveti za govorno-jezički razvoj dece',
   description: 'Stručni blog logopeda iz Kragujevca. Saveti o razvoju govora, dislaliji, pripremi za prvi razred, školskoj zrelosti i logopedskoj terapiji. Kategorije: Razvoj govora, Školska zrelost.',
   keywords: 'blog logoped Kragujevac, razvoj govora deca, dislalija saveti, priprema za prvi razred, školska zrelost, fonološka svesnost, logopedska terapija, razvojne norme, govorno-jezičke veštine, grafomotorika, privatni logoped blog, defektolog saveti, govorna terapija deca',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: 'Blog - Saveti za govorno-jezički razvoj dece | LOGONOVA',
     description: 'Stručni blog logopeda iz Kragujevca. Kategorije: Razvoj govora, Školska zrelost. Saveti o dislaliji, pripremi za prvi razred i logopedskoj terapiji.',
@@ -15,6 +26,20 @@ export const metadata: Metadata = {
     locale: 'sr_RS',
     siteName: 'LOGONOVA',
     url: 'https://logonova.rs/blog',
+    images: [
+      {
+        url: 'https://logonova.rs/blog-post-razvoj-govora.webp',
+        width: 1200,
+        height: 630,
+        alt: 'LOGONOVA Blog - Saveti za govorno-jezički razvoj dece',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog - LOGONOVA Kragujevac',
+    description: 'Stručni blog logopeda iz Kragujevca sa savetima o razvoju govora.',
+    images: ['https://logonova.rs/blog-post-razvoj-govora.webp'],
   },
   alternates: {
     canonical: 'https://logonova.rs/blog',
