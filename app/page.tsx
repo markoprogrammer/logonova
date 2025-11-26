@@ -247,6 +247,14 @@ export default function Home() {
                     "name": "Savetovanje roditelja",
                     "description": "Podrška i smernice za roditelje"
                   }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Terapija sa Forbrain slušalicama",
+                    "description": "Forbrain slušalice obrađuju glas koji se koštanom provodljivošcu prenosi do nervnog sistema i mozga, a to sve dovodi do boljeg razvoja govora, čitanja, pažnje i koncentracije."
+                  }
                 }
               ]
             }
@@ -268,6 +276,7 @@ export default function Home() {
             <li><a href="#pocetna" className="hover:text-accent transition">Početna</a></li>
             <li><a href="#onama" className="hover:text-accent transition">O nama</a></li>
             <li><a href="/nas-tim" className="hover:text-accent transition">Naš tim</a></li>
+            <li><a href="/nova-reynell-skala" className="hover:text-accent transition">Reynell skala</a></li>
             <li><a href="#usluge" className="hover:text-accent transition">Usluge</a></li>
             <li><a href="/cenovnik" className="hover:text-accent transition">Cenovnik</a></li>
             <li><a href="/blog" className="hover:text-accent transition">Blog</a></li>
@@ -350,7 +359,7 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 text-center">O nama</h2>
           <p className="text-gray-700 text-lg text-center mb-6">Pomažemo deci da razviju svoje govorne i jezičke veštine kroz individualni pristup i savremene metode. Naš <a href="/nas-tim" className="text-accent font-semibold hover:text-primary transition">stručni tim Ana Novaković, Marijana Mrmošanin i Gorjana Milosavljević</a> donosi dugogodišnje iskustvo u privatnoj, kliničkoj praksi i specijalnom obrazovanju. Vaše poverenje nam je važno, a napredak svakog klijenta naš je najveći uspeh.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-3 text-primary">Naša misija</h3>
               <p className="text-gray-700">Pružamo kvalitetnu logopedsku uslugu u Kragujevcu, fokusirajući se na individualne potrebe svakog deteta i njegove porodice. Naš cilj je da svako dete dostigne svoj puni govorno-jezički potencijal.</p>
@@ -358,6 +367,15 @@ export default function Home() {
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-3 text-primary">Naš pristup</h3>
               <p className="text-gray-700">Kombinujemo tradicionalne i savremene metode terapije, prilagođavajući se specifičnim potrebama svakog klijenta. Svaka terapija je jedinstvena i prilagođena individualnim potrebama deteta.</p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-3 text-primary">Savremena oprema</h3>
+              <p className="text-gray-700 mb-3">U našem radu koristimo:</p>
+              <ol className="list-decimal list-inside space-y-2 text-gray-700">
+                <li><strong className="text-primary">Forbrain slušalice</strong></li>
+                <li><strong className="text-primary">Digitalni logopedski set Behringer</strong></li>
+                <li><strong className="text-primary">Logopedske sonde</strong></li>
+              </ol>
             </div>
           </div>
         </div>
@@ -367,7 +385,7 @@ export default function Home() {
       <section id="usluge" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-primary mb-10 text-center">Usluge</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-accent hover:shadow-lg transition">
               <h3 className="text-xl font-semibold mb-2 text-primary">Logoped</h3>
               <p className="text-secondary font-medium">Dijagnostika i terapija govorno-jezičkih poremećaja</p>
@@ -390,6 +408,33 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </a>
+            </div>
+          </div>
+
+          {/* Forbrain Technology */}
+          <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-2xl p-8 border border-accent/20">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-primary mb-3">Forbrain slušalice</h3>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  U našem radu koristimo <strong className="text-primary">Forbrain</strong> slušalice obrađuju glas koji se koštanom provodljivošcu prenosi do nervnog sistema i mozga, a to sve dovodi do boljeg razvoja govora, čitanja, pažnje i koncentracije
+                </p>
+                <p className="text-gray-600 text-sm">
+                  Forbrain je posebno koristan za decu sa dislalijom, kasnim progovaranjem, poremećajima sluha i koncentracije.
+                </p>
+              </div>
+              <div className="flex-shrink-0 w-full md:w-auto">
+                <div className="relative w-full md:w-[500px] h-[200px] md:h-[250px] flex items-center justify-center">
+                  <Image
+                    src="/forbrain.png"
+                    alt="Forbrain slušalice - Bone conduction tehnologija za logopedsku terapiju"
+                    width={500}
+                    height={250}
+                    className="object-contain drop-shadow-lg w-full h-full"
+                    quality={95}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -140,6 +140,19 @@ export default function NasTim() {
                       <p className="text-gray-600 text-sm">Ministarstvo zdravlja Republike Srbije</p>
                     </div>
                   </div>
+
+                  <div className="flex items-start">
+                    <FaCertificate className="text-accent text-2xl mr-4 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-primary mb-1">Sertifikat</h4>
+                      <p className="text-gray-700">
+                        <Link href="/nova-reynell-skala" className="hover:text-accent transition underline">
+                          Nova Reynell razvojna jezička skala
+                        </Link>
+                      </p>
+                      <p className="text-gray-600 text-sm">Sertifikovana za primenu testa</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
