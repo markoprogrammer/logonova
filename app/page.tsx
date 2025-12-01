@@ -253,7 +253,7 @@ export default function Home() {
                   "itemOffered": {
                     "@type": "Service",
                     "name": "Terapija sa Forbrain slušalicama",
-                    "description": "Forbrain slušalice obrađuju glas koji se koštanom provodljivošcu prenosi do nervnog sistema i mozga, a to sve dovodi do boljeg razvoja govora, čitanja, pažnje i koncentracije."
+                    "description": "Forbrain slušalice obrađuju glas koji se koštanom provodljivošću prenosi do nervnog sistema i mozga, a to sve dovodi do boljeg razvoja govora, čitanja, pažnje i koncentracije."
                   }
                 }
               ]
@@ -417,7 +417,7 @@ export default function Home() {
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-primary mb-3">Forbrain slušalice</h3>
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  U našem radu koristimo <strong className="text-primary">Forbrain</strong> slušalice obrađuju glas koji se koštanom provodljivošcu prenosi do nervnog sistema i mozga, a to sve dovodi do boljeg razvoja govora, čitanja, pažnje i koncentracije
+                  U našem radu koristimo <strong className="text-primary">Forbrain</strong> slušalice obrađuju glas koji se koštanom provodljivošću prenosi do nervnog sistema i mozga, a to sve dovodi do boljeg razvoja govora, čitanja, pažnje i koncentracije
                 </p>
                 <p className="text-gray-600 text-sm">
                   Forbrain je posebno koristan za decu sa dislalijom, kasnim progovaranjem, poremećajima sluha i koncentracije.
