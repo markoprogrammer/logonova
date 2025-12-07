@@ -119,7 +119,7 @@ export default function Cenovnik() {
             <div className="bg-white rounded-lg shadow-lg border-t-4 border-accent p-8 hover:shadow-xl transition-shadow">
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-primary mb-4">Pregled sa psihologom</h3>
-                <div className="text-4xl font-bold text-accent mb-4">5.000</div>
+                <div className="text-4xl font-bold text-accent mb-4">6.000</div>
                 <div className="text-gray-600 mb-6">dinara</div>
                 <ul className="text-left space-y-3 mb-8">
                   <li className="flex items-start">
@@ -140,35 +140,42 @@ export default function Cenovnik() {
               {/* Tretman 30min */}
               <div className="bg-gray-50 rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-bold text-primary mb-4">Tretman 30 minuta</h3>
-                <div className="text-3xl font-bold text-accent mb-2">1.300</div>
+                <div className="text-3xl font-bold text-accent mb-2">1.500</div>
                 <div className="text-gray-600">dinara</div>
               </div>
 
               {/* Tretman 45min */}
               <div className="bg-gray-50 rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-bold text-primary mb-4">Tretman 45 minuta</h3>
-                <div className="text-3xl font-bold text-accent mb-2">1.500</div>
+                <div className="text-3xl font-bold text-accent mb-2">1.700</div>
                 <div className="text-gray-600">dinara</div>
               </div>
 
               {/* Tretman 1 sat */}
               <div className="bg-gray-50 rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-bold text-primary mb-4">Tretman 1 sat</h3>
+                <div className="text-3xl font-bold text-accent mb-2">1.900</div>
+                <div className="text-gray-600">dinara</div>
+              </div>
+
+              {/* Defektološko-logopedski tretman 30min */}
+              <div className="bg-white rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-bold text-primary mb-4">Defektološko-logopedski tretman 30 minuta</h3>
                 <div className="text-3xl font-bold text-accent mb-2">1.700</div>
                 <div className="text-gray-600">dinara</div>
               </div>
 
-              {/* Logopedsko-defektološki tretman 30min */}
+              {/* Defektološko-logopedski tretman 45min */}
               <div className="bg-white rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-bold text-primary mb-4">Logopedsko-defektološki tretman 30 minuta</h3>
-                <div className="text-3xl font-bold text-accent mb-2">1.600</div>
+                <h3 className="text-xl font-bold text-primary mb-4">Defektološko-logopedski tretman 45 minuta</h3>
+                <div className="text-3xl font-bold text-accent mb-2">1.900</div>
                 <div className="text-gray-600">dinara</div>
               </div>
 
-              {/* Logopedsko-defektološki tretman 45min */}
+              {/* Savetovanje */}
               <div className="bg-white rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-bold text-primary mb-4">Logopedsko-defektološki tretman 45 minuta</h3>
-                <div className="text-3xl font-bold text-accent mb-2">1.900</div>
+                <h3 className="text-xl font-bold text-primary mb-4">Savetovanje</h3>
+                <div className="text-3xl font-bold text-accent mb-2">2.000</div>
                 <div className="text-gray-600">dinara</div>
               </div>
 
@@ -177,10 +184,10 @@ export default function Cenovnik() {
 
           {/* Savetovanje */}
           <div className="bg-primary text-white rounded-lg p-8 text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Savetovanje</h2>
-            <div className="text-4xl font-bold text-accent mb-4">2.000</div>
+            <h2 className="text-3xl font-bold mb-4">Procena Novom Reynell skalom</h2>
+            <div className="text-4xl font-bold text-accent mb-4">6.000</div>
             <div className="text-xl mb-6">dinara</div>
-            <p className="text-lg">Stručno savetovanje za roditelje i porodicu</p>
+            <p className="text-lg">Procena jezičkih sposobnosti u cilju određivanja odgovarajuće terapije.</p>
           </div>
 
           {/* Potvrda za polazak u prvi razred */}
