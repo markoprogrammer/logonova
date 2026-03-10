@@ -130,6 +130,21 @@ export default function Cenovnik() {
               </div>
             </div>
 
+            {/* Prvi pregled defektologa */}
+            <div className="bg-white rounded-lg shadow-lg border-t-4 border-primary p-8 hover:shadow-xl transition-shadow">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-primary mb-4">Prvi pregled defektologa</h3>
+                <div className="text-4xl font-bold text-accent mb-4">4.500</div>
+                <div className="text-gray-600 mb-6">dinara</div>
+                <ul className="text-left space-y-3 mb-8">
+                  <li className="flex items-start">
+                    <FaCheckCircle className="text-accent mr-3 mt-1 flex-shrink-0" />
+                    <span>Defektološka procena razvoja</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
 
           {/* Tretmani */}
@@ -176,6 +191,27 @@ export default function Cenovnik() {
               <div className="bg-white rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
                 <h3 className="text-xl font-bold text-primary mb-4">Savetovanje</h3>
                 <div className="text-3xl font-bold text-accent mb-2">2.000</div>
+                <div className="text-gray-600">dinara</div>
+              </div>
+
+              {/* Tretman defektologa 30min */}
+              <div className="bg-gray-50 rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-bold text-primary mb-4">Tretman defektologa 30 minuta</h3>
+                <div className="text-3xl font-bold text-accent mb-2">1.700</div>
+                <div className="text-gray-600">dinara</div>
+              </div>
+
+              {/* Tretman defektologa 45min */}
+              <div className="bg-gray-50 rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-bold text-primary mb-4">Tretman defektologa 45 minuta</h3>
+                <div className="text-3xl font-bold text-accent mb-2">2.000</div>
+                <div className="text-gray-600">dinara</div>
+              </div>
+
+              {/* Tretman defektologa 60min */}
+              <div className="bg-gray-50 rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-bold text-primary mb-4">Tretman defektologa 60 minuta</h3>
+                <div className="text-3xl font-bold text-accent mb-2">2.500</div>
                 <div className="text-gray-600">dinara</div>
               </div>
 
