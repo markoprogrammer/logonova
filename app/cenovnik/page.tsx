@@ -130,6 +130,25 @@ export default function Cenovnik() {
               </div>
             </div>
 
+            {/* Kontrolni pregled defektologa */}
+            <div className="bg-white rounded-lg shadow-lg border-t-4 border-accent p-8 hover:shadow-xl transition-shadow">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-primary mb-4">Kontrolni pregled defektologa</h3>
+                <div className="text-4xl font-bold text-accent mb-4">3.000</div>
+                <div className="text-gray-600 mb-6">dinara</div>
+                <ul className="text-left space-y-3 mb-8">
+                  <li className="flex items-start">
+                    <FaCheckCircle className="text-accent mr-3 mt-1 flex-shrink-0" />
+                    <span>Praćenje napretka</span>
+                  </li>
+                  <li className="flex items-start">
+                    <FaCheckCircle className="text-accent mr-3 mt-1 flex-shrink-0" />
+                    <span>Prilagođavanje tretmana</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
             {/* Prvi pregled defektologa */}
             <div className="bg-white rounded-lg shadow-lg border-t-4 border-primary p-8 hover:shadow-xl transition-shadow">
               <div className="text-center">
