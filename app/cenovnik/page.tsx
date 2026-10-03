@@ -173,21 +173,21 @@ export default function Cenovnik() {
               
               {/* Tretman 30min */}
               <div className="bg-gray-50 rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-bold text-primary mb-4">Tretman 30 minuta</h3>
+                <h3 className="text-xl font-bold text-primary mb-4">Tretman dislalije 30 minuta</h3>
                 <div className="text-3xl font-bold text-accent mb-2">1.500</div>
                 <div className="text-gray-600">dinara</div>
               </div>
 
               {/* Tretman 45min */}
               <div className="bg-gray-50 rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-bold text-primary mb-4">Tretman 45 minuta</h3>
+                <h3 className="text-xl font-bold text-primary mb-4">Tretman dislalije 45 minuta</h3>
                 <div className="text-3xl font-bold text-accent mb-2">1.700</div>
                 <div className="text-gray-600">dinara</div>
               </div>
 
               {/* Tretman 1 sat */}
               <div className="bg-gray-50 rounded-lg p-8 text-center border hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-bold text-primary mb-4">Tretman 1 sat</h3>
+                <h3 className="text-xl font-bold text-primary mb-4">Tretman dislalije 1 sat</h3>
                 <div className="text-3xl font-bold text-accent mb-2">1.900</div>
                 <div className="text-gray-600">dinara</div>
               </div>
