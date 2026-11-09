@@ -23,10 +23,10 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'sr_RS',
     siteName: 'LOGONOVA',
-    url: 'https://logonova.rs/nova-reynell-skala',
+    url: 'https://www.logonova.rs/nova-reynell-skala',
     images: [
       {
-        url: 'https://logonova.rs/IMG_8035.webp',
+        url: 'https://www.logonova.rs/IMG_8035.webp',
         width: 1200,
         height: 630,
         alt: 'Nova Reynell razvojna jezička skala - LOGONOVA',
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Nova Reynell razvojna jezička skala - LOGONOVA',
     description: 'Ana Novaković je sertifikovana za primenu Nove Reynell razvojne jezičke skale.',
-    images: ['https://logonova.rs/IMG_8035.webp'],
+    images: ['https://www.logonova.rs/IMG_8035.webp'],
   },
   alternates: {
-    canonical: 'https://logonova.rs/nova-reynell-skala',
+    canonical: 'https://www.logonova.rs/nova-reynell-skala',
   },
 }
 
@@ -178,6 +178,9 @@ export default function NovaReynellSkala() {
       <footer className="bg-primary text-white py-6 mt-8">
         <div className="container mx-auto px-4 text-center">
           <p>&copy; {new Date().getFullYear()} Logopedski kabinet LOGONOVA Kragujevac. Sva prava zadržana.</p>
+          <p className="mt-2 text-sm opacity-80">
+            <a href="https://markomanojlovic.rs/izrada-sajta-kragujevac/" target="_blank" rel="noopener" className="underline underline-offset-4 hover:opacity-100">Izrada sajta</a>: <a href="https://markomanojlovic.rs/" target="_blank" rel="noopener" className="underline underline-offset-4 hover:opacity-100">Marko Manojlović</a>
+          </p>
         </div>
       </footer>
     </main>

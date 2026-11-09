@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://logonova.rs'),
+  metadataBase: new URL('https://www.logonova.rs'),
   title: {
     default: 'Privatni logopedski kabinet LOGONOVA Kragujevac | Ana Novakovic - Master defektologije logoped',
     template: '%s | LOGONOVA Kragujevac'
@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   description: 'Privatni logopedski kabinet LOGONOVA u Kragujevcu sa stručnim timom Ana Novaković, Marijana Mrmošanin i Gorjana Milosavljević. Profesionalna logopedska i defektološka usluga za decu - dijagnostika, terapija i savetovanje. Privatni logoped i defektolog sa individualnim pristupom. Zakazivanje: 063 8703545',
   keywords: 'privatni logoped Kragujevac, privatni defektolog Kragujevac, Gorjana Milosavljević defektolog oligofrenolog Kragujevac, specijalista defektolog Kragujevac, rana intervencija detinjstvo Kragujevac, Montessori metod Kragujevac, inkluzivno obrazovanje Kragujevac, senzorna integracija deca Kragujevac, Marijana Mrmošanin defektolog logoped, Marijana Mrmošanin reedukator psihomotorike Kragujevac, UKC Kragujevac defektolog, privatni logopedski kabinet Kragujevac, privatna logopedska praksa, privatni tretman govora, logoped Kragujevac, logopedski kabinet Kragujevac, Ana Novakovic master defektologije logoped, Marijana Mrmošanin autizam, Marijana Mrmošanin disleksija, govorno-jezičke poteškoće, terapija govora, logopedija Kragujevac, logopedski tretman, govorno-jezički razvoj, logoped za decu Kragujevac, logopedska terapija Kragujevac, privatna defektološka dijagnostika, privatni psiholog Kragujevac, reedukacija psihomotorike Kragujevac, klinički defektolog Kragujevac, priprema za školu, fonološka svesnost, grafomotorika, najbolji logoped Kragujevac, privatni logoped centar Kragujevac, logopedska dijagnostika, govorna terapija deca, privatna psihomotorna terapija, kasno progovaranje Kragujevac, mentalna ometenost logoped, tikovi tretman Kragujevac, mucanje terapija, augmentativna alternativna komunikacija',
   authors: [
-    { name: 'Ana Novakovic', url: 'https://logonova.rs' },
-    { name: 'Marijana Mrmošanin', url: 'https://logonova.rs/nas-tim' },
-    { name: 'Gorjana Milosavljević', url: 'https://logonova.rs/nas-tim' }
+    { name: 'Ana Novakovic', url: 'https://www.logonova.rs' },
+    { name: 'Marijana Mrmošanin', url: 'https://www.logonova.rs/nas-tim' },
+    { name: 'Gorjana Milosavljević', url: 'https://www.logonova.rs/nas-tim' }
   ],
   creator: 'Ana Novakovic',
   publisher: 'LOGONOVA',

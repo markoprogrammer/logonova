@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://logonova.rs'
+  const baseUrl = 'https://www.logonova.rs'
   const now = new Date()
   
   return [

@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Script from 'next/script'
 import { FaArrowLeft, FaCalendar, FaUser } from 'react-icons/fa'
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
@@ -302,10 +301,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       siteName: 'LOGONOVA',
       publishedTime: params.slug === 'razvoj-govora-i-glasovi' ? '2025-07-27' : '2025-07-02',
       authors: [post.author],
-      url: `https://logonova.rs/blog/${params.slug}`,
+      url: `https://www.logonova.rs/blog/${params.slug}`,
       images: [
         {
-          url: params.slug === 'razvoj-govora-i-glasovi' ? 'https://logonova.rs/blog-post-razvoj-govora.webp' : 'https://logonova.rs/blog-priprema-za-prvi-razred.webp',
+          url: params.slug === 'razvoj-govora-i-glasovi' ? 'https://www.logonova.rs/blog-post-razvoj-govora.webp' : 'https://www.logonova.rs/blog-priprema-za-prvi-razred.webp',
           width: 1200,
           height: 630,
           alt: params.slug === 'razvoj-govora-i-glasovi' 
@@ -318,10 +317,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       card: 'summary_large_image',
       title: post.title,
       description: post.intro,
-      images: [params.slug === 'razvoj-govora-i-glasovi' ? 'https://logonova.rs/blog-post-razvoj-govora.webp' : 'https://logonova.rs/blog-priprema-za-prvi-razred.webp'],
+      images: [params.slug === 'razvoj-govora-i-glasovi' ? 'https://www.logonova.rs/blog-post-razvoj-govora.webp' : 'https://www.logonova.rs/blog-priprema-za-prvi-razred.webp'],
     },
     alternates: {
-      canonical: `https://logonova.rs/blog/${params.slug}`,
+      canonical: `https://www.logonova.rs/blog/${params.slug}`,
     },
   }
 }
@@ -336,7 +335,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
   return (
     <main className="min-h-screen bg-white">
       {/* Enhanced Structured Data */}
-      <Script
+      <script
         id="enhanced-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -350,33 +349,33 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               "author": {
                 "@type": "Person",
                 "name": post.author,
-                "url": "https://logonova.rs/nas-tim",
+                "url": "https://www.logonova.rs/nas-tim",
                 "jobTitle": params.slug === 'razvoj-govora-i-glasovi' ? "Master defektologije logoped" : "Master defektologije logoped",
                 "worksFor": {
                   "@type": "Organization",
                   "name": "LOGONOVA",
-                  "url": "https://logonova.rs"
+                  "url": "https://www.logonova.rs"
                 },
-                "image": "https://logonova.rs/ana-novakovic.webp"
+                "image": "https://www.logonova.rs/ana-novakovic.webp"
               },
               "publisher": {
                 "@type": "Organization",
                 "name": "LOGONOVA",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://logonova.rs/favicon.png"
+                  "url": "https://www.logonova.rs/favicon.png"
                 },
-                "url": "https://logonova.rs"
+                "url": "https://www.logonova.rs"
               },
               "datePublished": params.slug === 'razvoj-govora-i-glasovi' ? "2025-07-27" : "2025-07-02",
               "dateModified": params.slug === 'razvoj-govora-i-glasovi' ? "2025-07-27" : "2025-07-02",
               "mainEntityOfPage": {
                 "@type": "WebPage",
-                "@id": `https://logonova.rs/blog/${params.slug}`
+                "@id": `https://www.logonova.rs/blog/${params.slug}`
               },
               "image": {
                 "@type": "ImageObject",
-                "url": params.slug === 'razvoj-govora-i-glasovi' ? "https://logonova.rs/blog-post-razvoj-govora.webp" : "https://logonova.rs/blog-priprema-za-prvi-razred.webp",
+                "url": params.slug === 'razvoj-govora-i-glasovi' ? "https://www.logonova.rs/blog-post-razvoj-govora.webp" : "https://www.logonova.rs/blog-priprema-za-prvi-razred.webp",
                 "width": 1200,
                 "height": 630
               },
@@ -401,19 +400,19 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Početna",
-                  "item": "https://logonova.rs"
+                  "item": "https://www.logonova.rs"
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Blog",
-                  "item": "https://logonova.rs/blog"
+                  "item": "https://www.logonova.rs/blog"
                 },
                 {
                   "@type": "ListItem",
                   "position": 3,
                   "name": post.title,
-                  "item": `https://logonova.rs/blog/${params.slug}`
+                  "item": `https://www.logonova.rs/blog/${params.slug}`
                 }
               ]
             },
@@ -584,7 +583,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
 
           {/* Social Sharing */}
           <SocialShare 
-            url={`https://logonova.rs/blog/${params.slug}`}
+            url={`https://www.logonova.rs/blog/${params.slug}`}
             title={post.title}
           />
 
@@ -644,6 +643,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       <footer className="bg-primary text-white py-6 mt-8">
         <div className="container mx-auto px-4 text-center">
           <p>&copy; {new Date().getFullYear()} Logopedski kabinet LOGONOVA Kragujevac. Sva prava zadržana.</p>
+          <p className="mt-2 text-sm opacity-80">
+            <a href="https://markomanojlovic.rs/izrada-sajta-kragujevac/" target="_blank" rel="noopener" className="underline underline-offset-4 hover:opacity-100">Izrada sajta</a>: <a href="https://markomanojlovic.rs/" target="_blank" rel="noopener" className="underline underline-offset-4 hover:opacity-100">Marko Manojlović</a>
+          </p>
         </div>
       </footer>
     </main>

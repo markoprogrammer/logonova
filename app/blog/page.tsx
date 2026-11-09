@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Script from 'next/script'
 import { FaArrowLeft, FaCalendar, FaUser, FaArrowRight } from 'react-icons/fa'
 import type { Metadata } from 'next'
 
@@ -25,10 +24,10 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'sr_RS',
     siteName: 'LOGONOVA',
-    url: 'https://logonova.rs/blog',
+    url: 'https://www.logonova.rs/blog',
     images: [
       {
-        url: 'https://logonova.rs/blog-post-razvoj-govora.webp',
+        url: 'https://www.logonova.rs/blog-post-razvoj-govora.webp',
         width: 1200,
         height: 630,
         alt: 'LOGONOVA Blog - Saveti za govorno-jezički razvoj dece',
@@ -39,10 +38,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Blog - LOGONOVA Kragujevac',
     description: 'Stručni blog logopeda iz Kragujevca sa savetima o razvoju govora.',
-    images: ['https://logonova.rs/blog-post-razvoj-govora.webp'],
+    images: ['https://www.logonova.rs/blog-post-razvoj-govora.webp'],
   },
   alternates: {
-    canonical: 'https://logonova.rs/blog',
+    canonical: 'https://www.logonova.rs/blog',
   },
 }
 
@@ -75,7 +74,7 @@ export default function Blog() {
   return (
     <main className="min-h-screen bg-white">
       {/* Blog Structured Data */}
-      <Script
+      <script
         id="blog-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -84,26 +83,26 @@ export default function Blog() {
             "@type": "Blog",
             "name": "LOGONOVA Blog - Saveti za govorno-jezički razvoj",
             "description": "Stručni blog logopeda iz Kragujevca sa savetima o razvoju govora, dislaliji, pripremi za prvi razred i logopedskoj terapiji.",
-            "url": "https://logonova.rs/blog",
+            "url": "https://www.logonova.rs/blog",
             "publisher": {
               "@type": "Organization",
               "name": "LOGONOVA",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://logonova.rs/favicon.png"
+                "url": "https://www.logonova.rs/favicon.png"
               }
             },
             "blogPost": blogPosts.map(post => ({
               "@type": "BlogPosting",
               "headline": post.title,
               "description": post.excerpt,
-              "url": `https://logonova.rs/blog/${post.id}`,
+              "url": `https://www.logonova.rs/blog/${post.id}`,
               "datePublished": post.date === '27. jul 2025' ? '2025-07-27' : '2025-07-02',
               "author": {
                 "@type": "Person",
                 "name": post.author
               },
-              "image": `https://logonova.rs${post.image}`,
+              "image": `https://www.logonova.rs${post.image}`,
               "articleSection": post.category,
               "keywords": post.tags.join(', ')
             }))
@@ -228,6 +227,9 @@ export default function Blog() {
       <footer className="bg-primary text-white py-6 mt-8">
         <div className="container mx-auto px-4 text-center">
           <p>&copy; {new Date().getFullYear()} Logopedski kabinet LOGONOVA Kragujevac. Sva prava zadržana.</p>
+          <p className="mt-2 text-sm opacity-80">
+            <a href="https://markomanojlovic.rs/izrada-sajta-kragujevac/" target="_blank" rel="noopener" className="underline underline-offset-4 hover:opacity-100">Izrada sajta</a>: <a href="https://markomanojlovic.rs/" target="_blank" rel="noopener" className="underline underline-offset-4 hover:opacity-100">Marko Manojlović</a>
+          </p>
         </div>
       </footer>
     </main>

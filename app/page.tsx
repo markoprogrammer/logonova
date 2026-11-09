@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaGoogle, FaExternalLinkAlt } from 'react-icons/fa'
-import Script from 'next/script'
 import MobileMenu from './components/MobileMenu'
 import type { Metadata } from 'next'
 
@@ -24,10 +23,10 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'sr_RS',
     siteName: 'LOGONOVA',
-    url: 'https://logonova.rs',
+    url: 'https://www.logonova.rs',
     images: [
       {
-        url: 'https://logonova.rs/IMG_8035.webp',
+        url: 'https://www.logonova.rs/IMG_8035.webp',
         width: 1200,
         height: 630,
         alt: 'Logopedski kabinet LOGONOVA Kragujevac - Profesionalna logopedska usluga',
@@ -38,10 +37,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Privatni logopedski kabinet LOGONOVA Kragujevac',
     description: 'Privatni logopedski kabinet za decu u Kragujevcu. Ana Novaković master defektologije logoped sa stručnim timom - privatni logoped i defektolog.',
-    images: ['https://logonova.rs/IMG_8035.webp'],
+    images: ['https://www.logonova.rs/IMG_8035.webp'],
   },
   alternates: {
-    canonical: 'https://logonova.rs',
+    canonical: 'https://www.logonova.rs',
   },
 }
 
@@ -50,7 +49,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* Structured Data for Local Business */}
-      <Script
+      <script
         id="structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -58,7 +57,7 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "MedicalBusiness",
             "name": "Logopedski kabinet LOGONOVA Kragujevac",
-            "image": "https://logonova.rs/IMG_8035.webp",
+            "image": "https://www.logonova.rs/IMG_8035.webp",
             "description": "Profesionalna logopedska usluga u Kragujevcu. Individualni pristup, dijagnostika i terapija govorno-jezičkih poremećaja za decu.",
             "address": {
               "@type": "PostalAddress",
@@ -72,7 +71,7 @@ export default function Home() {
               "latitude": "44.0165",
               "longitude": "20.9202"
             },
-            "url": "https://logonova.rs",
+            "url": "https://www.logonova.rs",
             "telephone": "+381638703545",
             "email": "ana.novakovic@logonova.rs",
             "priceRange": "$$",
@@ -103,18 +102,18 @@ export default function Home() {
       />
 
       {/* Sitelinks Navigation Structure */}
-      <Script
+      <script
         id="sitelinks-searchbox"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebSite",
-            "url": "https://logonova.rs",
+            "url": "https://www.logonova.rs",
             "name": "Logopedski kabinet LOGONOVA Kragujevac",
             "potentialAction": {
               "@type": "SearchAction",
-              "target": "https://logonova.rs/blog?search={search_term_string}",
+              "target": "https://www.logonova.rs/blog?search={search_term_string}",
               "query-input": "required name=search_term_string"
             }
           })
@@ -122,7 +121,7 @@ export default function Home() {
       />
 
       {/* Breadcrumb Navigation */}
-      <Script
+      <script
         id="breadcrumb-navigation"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -134,31 +133,31 @@ export default function Home() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Početna",
-                "item": "https://logonova.rs"
+                "item": "https://www.logonova.rs"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Naš tim",
-                "item": "https://logonova.rs/nas-tim"
+                "item": "https://www.logonova.rs/nas-tim"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Cenovnik",
-                "item": "https://logonova.rs/cenovnik"
+                "item": "https://www.logonova.rs/cenovnik"
               },
               {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "Blog",
-                "item": "https://logonova.rs/blog"
+                "item": "https://www.logonova.rs/blog"
               },
               {
                 "@type": "ListItem",
                 "position": 5,
                 "name": "Kontakt",
-                "item": "https://logonova.rs#kontakt"
+                "item": "https://www.logonova.rs#kontakt"
               }
             ]
           })
@@ -166,7 +165,7 @@ export default function Home() {
       />
 
       {/* Organization structured data for sitelinks */}
-      <Script
+      <script
         id="organization-structure"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -175,9 +174,9 @@ export default function Home() {
             "@type": "Organization",
             "name": "Logopedski kabinet LOGONOVA",
             "alternateName": "LOGONOVA Kragujevac",
-            "url": "https://logonova.rs",
-            "logo": "https://logonova.rs/favicon.png",
-            "image": "https://logonova.rs/IMG_8035.webp",
+            "url": "https://www.logonova.rs",
+            "logo": "https://www.logonova.rs/favicon.png",
+            "image": "https://www.logonova.rs/IMG_8035.webp",
             "description": "Privatni logopedski kabinet u Kragujevcu. Ana Novaković master defektologije logoped sa stručnim timom.",
             "address": {
               "@type": "PostalAddress",
@@ -499,6 +498,9 @@ export default function Home() {
       <footer className="bg-primary text-white py-6 mt-8">
         <div className="container mx-auto px-4 text-center">
           <p>&copy; {new Date().getFullYear()} Logopedski kabinet LOGONOVA Kragujevac. Sva prava zadržana.</p>
+          <p className="mt-2 text-sm opacity-80">
+            <a href="https://markomanojlovic.rs/izrada-sajta-kragujevac/" target="_blank" rel="noopener" className="underline underline-offset-4 hover:opacity-100">Izrada sajta</a>: <a href="https://markomanojlovic.rs/" target="_blank" rel="noopener" className="underline underline-offset-4 hover:opacity-100">Marko Manojlović</a>
+          </p>
         </div>
       </footer>
     </main>

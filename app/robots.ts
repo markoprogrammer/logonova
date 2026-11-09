@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/'],
       },
     ],
-    sitemap: 'https://logonova.rs/sitemap.xml',
+    sitemap: 'https://www.logonova.rs/sitemap.xml',
   }
 }
 

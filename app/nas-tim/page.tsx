@@ -24,10 +24,10 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'sr_RS',
     siteName: 'LOGONOVA',
-    url: 'https://logonova.rs/nas-tim',
+    url: 'https://www.logonova.rs/nas-tim',
     images: [
       {
-        url: 'https://logonova.rs/IMG_8035.webp',
+        url: 'https://www.logonova.rs/IMG_8035.webp',
         width: 1200,
         height: 630,
         alt: 'LOGONOVA tim - Ana Novaković, Marijana Mrmošanin, Gorjana Milosavljević',
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Naš tim - LOGONOVA Kragujevac',
     description: 'Upoznajte naš stručni tim privatnog logopedskog kabineta LOGONOVA.',
-    images: ['https://logonova.rs/IMG_8035.webp'],
+    images: ['https://www.logonova.rs/IMG_8035.webp'],
   },
   alternates: {
-    canonical: 'https://logonova.rs/nas-tim',
+    canonical: 'https://www.logonova.rs/nas-tim',
   },
 }
 
@@ -479,6 +479,9 @@ export default function NasTim() {
       <footer className="bg-primary text-white py-6 mt-8">
         <div className="container mx-auto px-4 text-center">
           <p>&copy; {new Date().getFullYear()} Logopedski kabinet LOGONOVA Kragujevac. Sva prava zadržana.</p>
+          <p className="mt-2 text-sm opacity-80">
+            <a href="https://markomanojlovic.rs/izrada-sajta-kragujevac/" target="_blank" rel="noopener" className="underline underline-offset-4 hover:opacity-100">Izrada sajta</a>: <a href="https://markomanojlovic.rs/" target="_blank" rel="noopener" className="underline underline-offset-4 hover:opacity-100">Marko Manojlović</a>
+          </p>
         </div>
       </footer>
     </main>
