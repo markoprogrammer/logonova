@@ -21,7 +21,7 @@ Next.js 14 App Router + TypeScript + Tailwind, statically rendered. No backend, 
 - **Pages** (`app/*/page.tsx`): `/` (home), `/nas-tim` (team), `/cenovnik` (pricing), `/blog`, `/blog/[slug]`, `/nova-reynell-skala`. Each page is a self-contained server component that renders its own header/nav and footer inline; there is no shared header/footer component. Changes to navigation, contact info (phone `063 8703545`), or footer must be repeated across every page.
 - **Client components**: only `app/components/MobileMenu.tsx` and `app/blog/components/SocialShare.tsx` use `'use client'`.
 - **Pricing** (`app/cenovnik/page.tsx`): prices are hand-written JSX cards (amounts in dinars), not a data array — edit the markup directly.
-- **Blog**: posts live in a `blogPosts` object keyed by slug in `app/blog/[slug]/page.tsx` (title, date, author, intro, `content` sections of `{title, emoji, items[]}`), with `generateMetadata` per post. The listing in `app/blog/page.tsx` has its own separate `blogPosts` array. Adding a post requires updating **both** files plus `app/sitemap.ts`, and adding its cover image to `public/` (`.webp`).
+- **Blog**: posts live in a `blogPosts` object keyed by slug in `app/blog/[slug]/page.tsx` (title, date, author, intro, `content` sections of `{title, emoji, items[]}`), with `generateMetadata` per post. The listing in `app/blog/page.tsx` has its own separate `blogPosts` array. Adding a post requires updating **both** files plus `app/sitemap.ts` and `public/llms.txt`, and adding its cover image to `public/` (`.webp`).
 
 ## SEO conventions
 
@@ -38,3 +38,5 @@ Tailwind custom colors in `tailwind.config.js`: `primary` (#455379), `accent` (#
 ## Deploy
 
 A push does not deploy. Deploy a preview with `npx vercel --yes`; Marko promotes it to production in Vercel. Every page's footer ends with the credit line "Izrada sajta: Marko Manojlović" (footers are inline per page).
+
+`public/llms.txt` is the site in plain Markdown for AI assistants. It repeats only what the pages say and links to the Cenovnik instead of copying prices; update it when services, team, contact or blog posts change.

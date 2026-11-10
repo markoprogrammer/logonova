@@ -47,6 +47,20 @@ export const metadata: Metadata = {
 export default function Cenovnik() {
   return (
     <main className="min-h-screen bg-white">
+      {/* Breadcrumbs for search results, in the served HTML (a plain script tag, not next/script) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Početna", "item": "https://www.logonova.rs/" },
+              { "@type": "ListItem", "position": 2, "name": "Cenovnik", "item": "https://www.logonova.rs/cenovnik" },
+            ],
+          }),
+        }}
+      />
       {/* Navigation */}
       <nav className="flex flex-wrap justify-between items-center px-4 md:px-6 py-4 bg-white shadow-sm sticky top-0 z-100">
         <Link href="/" className="flex items-center space-x-2">

@@ -306,7 +306,8 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           <div className="relative z-10 h-full flex flex-col items-center justify-center text-center pt-72">
-            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-2 leading-tight">Logopedski kabinet LOGONOVA</h1>
+            {/* Phone hero: the desktop hero below holds the page's one <h1>; this copy is announced as a heading where it shows. */}
+            <p role="heading" aria-level={1} className="text-3xl sm:text-4xl font-bold text-white mb-2 leading-tight">Logopedski kabinet LOGONOVA</p>
             <h2 className="text-lg sm:text-xl text-white font-semibold mb-4">Ana Novaković, master logoped</h2>
             <p className="text-white text-base sm:text-lg font-medium mb-6">Stručna logopedska i defektološka podrška za decu.</p>
             <div className="flex flex-col gap-4">
